@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFE8E8BE2794255A00AE4781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */; };
+		BFE8E8C02794255A00AE4781 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8BF2794255A00AE4781 /* SceneDelegate.swift */; };
+		BFE8E8C22794255A00AE4781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8C12794255A00AE4781 /* ViewController.swift */; };
+		BFE8E8C52794255A00AE4781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE8E8C32794255A00AE4781 /* Main.storyboard */; };
+		BFE8E8C82794255A00AE4781 /* Jiwei.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8C62794255A00AE4781 /* Jiwei.xcdatamodeld */; };
+		BFE8E8CA2794255B00AE4781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFE8E8C92794255B00AE4781 /* Assets.xcassets */; };
+		BFE8E8CD2794255B00AE4781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFE8E8CB2794255B00AE4781 /* LaunchScreen.storyboard */; };
+		BFE8E8D82794255B00AE4781 /* JiweiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8D72794255B00AE4781 /* JiweiTests.swift */; };
+		BFE8E8E22794255B00AE4781 /* JiweiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8E12794255B00AE4781 /* JiweiUITests.swift */; };
+		BFE8E8E42794255B00AE4781 /* JiweiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8E32794255B00AE4781 /* JiweiUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFE8E8D42794255B00AE4781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFE8E8B22794255A00AE4781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFE8E8B92794255A00AE4781;
+			remoteInfo = Jiwei;
+		};
+		BFE8E8DE2794255B00AE4781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFE8E8B22794255A00AE4781 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFE8E8B92794255A00AE4781;
+			remoteInfo = Jiwei;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFE8E8BA2794255A00AE4781 /* Jiwei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jiwei.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFE8E8BF2794255A00AE4781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BFE8E8C12794255A00AE4781 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFE8E8C42794255A00AE4781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFE8E8C72794255A00AE4781 /* Jiwei.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jiwei.xcdatamodel; sourceTree = "<group>"; };
+		BFE8E8C92794255B00AE4781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFE8E8CC2794255B00AE4781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFE8E8CE2794255B00AE4781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFE8E8D32794255B00AE4781 /* JiweiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JiweiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE8E8D72794255B00AE4781 /* JiweiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiTests.swift; sourceTree = "<group>"; };
+		BFE8E8DD2794255B00AE4781 /* JiweiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JiweiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE8E8E12794255B00AE4781 /* JiweiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiUITests.swift; sourceTree = "<group>"; };
+		BFE8E8E32794255B00AE4781 /* JiweiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFE8E8B72794255A00AE4781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE8E8D02794255B00AE4781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE8E8DA2794255B00AE4781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFE8E8B12794255A00AE4781 = {
+			isa = PBXGroup;
+			children = (
+				BFE8E8BC2794255A00AE4781 /* Jiwei */,
+				BFE8E8D62794255B00AE4781 /* JiweiTests */,
+				BFE8E8E02794255B00AE4781 /* JiweiUITests */,
+				BFE8E8BB2794255A00AE4781 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFE8E8BB2794255A00AE4781 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8E8BA2794255A00AE4781 /* Jiwei.app */,
+				BFE8E8D32794255B00AE4781 /* JiweiTests.xctest */,
+				BFE8E8DD2794255B00AE4781 /* JiweiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFE8E8BC2794255A00AE4781 /* Jiwei */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */,
+				BFE8E8BF2794255A00AE4781 /* SceneDelegate.swift */,
+				BFE8E8C12794255A00AE4781 /* ViewController.swift */,
+				BFE8E8C32794255A00AE4781 /* Main.storyboard */,
+				BFE8E8C92794255B00AE4781 /* Assets.xcassets */,
+				BFE8E8CB2794255B00AE4781 /* LaunchScreen.storyboard */,
+				BFE8E8CE2794255B00AE4781 /* Info.plist */,
+				BFE8E8C62794255A00AE4781 /* Jiwei.xcdatamodeld */,
+			);
+			path = Jiwei;
+			sourceTree = "<group>";
+		};
+		BFE8E8D62794255B00AE4781 /* JiweiTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8E8D72794255B00AE4781 /* JiweiTests.swift */,
+			);
+			path = JiweiTests;
+			sourceTree = "<group>";
+		};
+		BFE8E8E02794255B00AE4781 /* JiweiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BFE8E8E12794255B00AE4781 /* JiweiUITests.swift */,
+				BFE8E8E32794255B00AE4781 /* JiweiUITestsLaunchTests.swift */,
+			);
+			path = JiweiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFE8E8B92794255A00AE4781 /* Jiwei */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFE8E8E72794255B00AE4781 /* Build configuration list for PBXNativeTarget "Jiwei" */;
+			buildPhases = (
+				BFE8E8B62794255A00AE4781 /* Sources */,
+				BFE8E8B72794255A00AE4781 /* Frameworks */,
+				BFE8E8B82794255A00AE4781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jiwei;
+			productName = Jiwei;
+			productReference = BFE8E8BA2794255A00AE4781 /* Jiwei.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFE8E8D22794255B00AE4781 /* JiweiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFE8E8EA2794255B00AE4781 /* Build configuration list for PBXNativeTarget "JiweiTests" */;
+			buildPhases = (
+				BFE8E8CF2794255B00AE4781 /* Sources */,
+				BFE8E8D02794255B00AE4781 /* Frameworks */,
+				BFE8E8D12794255B00AE4781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFE8E8D52794255B00AE4781 /* PBXTargetDependency */,
+			);
+			name = JiweiTests;
+			productName = JiweiTests;
+			productReference = BFE8E8D32794255B00AE4781 /* JiweiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BFE8E8DC2794255B00AE4781 /* JiweiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFE8E8ED2794255B00AE4781 /* Build configuration list for PBXNativeTarget "JiweiUITests" */;
+			buildPhases = (
+				BFE8E8D92794255B00AE4781 /* Sources */,
+				BFE8E8DA2794255B00AE4781 /* Frameworks */,
+				BFE8E8DB2794255B00AE4781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFE8E8DF2794255B00AE4781 /* PBXTargetDependency */,
+			);
+			name = JiweiUITests;
+			productName = JiweiUITests;
+			productReference = BFE8E8DD2794255B00AE4781 /* JiweiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFE8E8B22794255A00AE4781 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					BFE8E8B92794255A00AE4781 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					BFE8E8D22794255B00AE4781 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = BFE8E8B92794255A00AE4781;
+					};
+					BFE8E8DC2794255B00AE4781 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = BFE8E8B92794255A00AE4781;
+					};
+				};
+			};
+			buildConfigurationList = BFE8E8B52794255A00AE4781 /* Build configuration list for PBXProject "Jiwei" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFE8E8B12794255A00AE4781;
+			productRefGroup = BFE8E8BB2794255A00AE4781 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFE8E8B92794255A00AE4781 /* Jiwei */,
+				BFE8E8D22794255B00AE4781 /* JiweiTests */,
+				BFE8E8DC2794255B00AE4781 /* JiweiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFE8E8B82794255A00AE4781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFE8E8CD2794255B00AE4781 /* LaunchScreen.storyboard in Resources */,
+				BFE8E8CA2794255B00AE4781 /* Assets.xcassets in Resources */,
+				BFE8E8C52794255A00AE4781 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE8E8D12794255B00AE4781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE8E8DB2794255B00AE4781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFE8E8B62794255A00AE4781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFE8E8C22794255A00AE4781 /* ViewController.swift in Sources */,
+				BFE8E8BE2794255A00AE4781 /* AppDelegate.swift in Sources */,
+				BFE8E8C82794255A00AE4781 /* Jiwei.xcdatamodeld in Sources */,
+				BFE8E8C02794255A00AE4781 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE8E8CF2794255B00AE4781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFE8E8D82794255B00AE4781 /* JiweiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFE8E8D92794255B00AE4781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFE8E8E22794255B00AE4781 /* JiweiUITests.swift in Sources */,
+				BFE8E8E42794255B00AE4781 /* JiweiUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFE8E8D52794255B00AE4781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFE8E8B92794255A00AE4781 /* Jiwei */;
+			targetProxy = BFE8E8D42794255B00AE4781 /* PBXContainerItemProxy */;
+		};
+		BFE8E8DF2794255B00AE4781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFE8E8B92794255A00AE4781 /* Jiwei */;
+			targetProxy = BFE8E8DE2794255B00AE4781 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFE8E8C32794255A00AE4781 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFE8E8C42794255A00AE4781 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFE8E8CB2794255B00AE4781 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFE8E8CC2794255B00AE4781 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFE8E8E52794255B00AE4781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BFE8E8E62794255B00AE4781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFE8E8E82794255B00AE4781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H65Q9JS5ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jiwei/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.Jiwei;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFE8E8E92794255B00AE4781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H65Q9JS5ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jiwei/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.Jiwei;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BFE8E8EB2794255B00AE4781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H65Q9JS5ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.JiweiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jiwei.app/Jiwei";
+			};
+			name = Debug;
+		};
+		BFE8E8EC2794255B00AE4781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H65Q9JS5ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.JiweiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jiwei.app/Jiwei";
+			};
+			name = Release;
+		};
+		BFE8E8EE2794255B00AE4781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H65Q9JS5ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.JiweiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Jiwei;
+			};
+			name = Debug;
+		};
+		BFE8E8EF2794255B00AE4781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H65Q9JS5ZG;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.JiweiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Jiwei;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFE8E8B52794255A00AE4781 /* Build configuration list for PBXProject "Jiwei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFE8E8E52794255B00AE4781 /* Debug */,
+				BFE8E8E62794255B00AE4781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFE8E8E72794255B00AE4781 /* Build configuration list for PBXNativeTarget "Jiwei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFE8E8E82794255B00AE4781 /* Debug */,
+				BFE8E8E92794255B00AE4781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFE8E8EA2794255B00AE4781 /* Build configuration list for PBXNativeTarget "JiweiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFE8E8EB2794255B00AE4781 /* Debug */,
+				BFE8E8EC2794255B00AE4781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFE8E8ED2794255B00AE4781 /* Build configuration list for PBXNativeTarget "JiweiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFE8E8EE2794255B00AE4781 /* Debug */,
+				BFE8E8EF2794255B00AE4781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BFE8E8C62794255A00AE4781 /* Jiwei.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BFE8E8C72794255A00AE4781 /* Jiwei.xcdatamodel */,
+			);
+			currentVersion = BFE8E8C72794255A00AE4781 /* Jiwei.xcdatamodel */;
+			path = Jiwei.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BFE8E8B22794255A00AE4781 /* Project object */;
+}

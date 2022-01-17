@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,7 +55,7 @@
                                             <color key="titleColor" systemColor="systemGray6Color"/>
                                         </state>
                                         <connections>
-                                            <action selector="showMessageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dx2-LZ-Vzr"/>
+                                            <action selector="loginActionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2t0-pv-sL1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Prg-Tc-tLZ">
@@ -68,13 +68,16 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" systemColor="tintColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f6f-tF-XBt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="8Oq-X3-KqX">
                                 <rect key="frame" x="45" y="342" width="300" height="103"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IOi-1Q-pxo">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IOi-1Q-pxo">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -84,7 +87,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7Vc-7b-Bb0">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="7Vc-7b-Bb0">
                                         <rect key="frame" x="0.0" y="63" width="300" height="40"/>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.97254901959999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -110,14 +113,164 @@
                             <constraint firstItem="5dd-cF-2RA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zhV-ZO-L6c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="password" destination="7Vc-7b-Bb0" id="NoI-sn-7sV"/>
+                        <outlet property="username" destination="IOi-1Q-pxo" id="Jdw-IL-NKt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.46153846153846" y="97.393364928909946"/>
         </scene>
+        <!--个人中心-->
+        <scene sceneID="uXZ-Ys-EOZ">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="2z4-cS-nGp" customClass="MyProfileViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIL-YQ-kpH">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7At-pI-Lc5">
+                                <rect key="frame" x="87" y="44" width="216" height="32"/>
+                                <segments>
+                                    <segment title="我的任务"/>
+                                    <segment title="个人信息"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k2U-sB-dLB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7At-pI-Lc5" firstAttribute="leading" secondItem="k2U-sB-dLB" secondAttribute="leading" constant="87" id="6SB-CS-1cY"/>
+                            <constraint firstItem="7At-pI-Lc5" firstAttribute="centerX" secondItem="nIL-YQ-kpH" secondAttribute="centerX" id="GwF-kn-hUw"/>
+                            <constraint firstItem="7At-pI-Lc5" firstAttribute="top" secondItem="k2U-sB-dLB" secondAttribute="top" id="W2g-UW-fYa"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="个人中心" image="person.fill" catalog="system" id="Iuv-iE-W2b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8UA-bj-GYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016.9230769230769" y="96.682464454976298"/>
+        </scene>
+        <!--任务中心-->
+        <scene sceneID="tnO-Pe-xJ5">
+            <objects>
+                <viewController id="Zm0-Lw-s8J" customClass="TaskCenterViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pKT-kO-57W">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-lh-1Z9">
+                                <rect key="frame" x="87" y="44" width="216" height="32"/>
+                                <segments>
+                                    <segment title="所有任务"/>
+                                    <segment title="线上任务"/>
+                                    <segment title="线下任务"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4GW-vj-f0Y"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K3B-lh-1Z9" firstAttribute="top" secondItem="4GW-vj-f0Y" secondAttribute="top" id="Z1A-LX-C9I"/>
+                            <constraint firstItem="K3B-lh-1Z9" firstAttribute="leading" secondItem="4GW-vj-f0Y" secondAttribute="leading" constant="87" id="o8t-dm-Fns"/>
+                            <constraint firstItem="K3B-lh-1Z9" firstAttribute="centerX" secondItem="pKT-kO-57W" secondAttribute="centerX" id="zrJ-Co-IpG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="任务中心" image="laptopcomputer.and.iphone" catalog="system" id="7PG-TB-ynw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xqd-gN-dGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2909" y="-435"/>
+        </scene>
+        <!--成员管理-->
+        <scene sceneID="U3E-Lh-Hzv">
+            <objects>
+                <viewController id="YtP-LG-kDD" customClass="AdminManagementViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T31-0B-Agp">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mds-gc-U1U">
+                                <rect key="frame" x="87" y="44" width="216" height="32"/>
+                                <segments>
+                                    <segment title="队员管理"/>
+                                    <segment title="接线员管理"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ylf-GC-HUA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mds-gc-U1U" firstAttribute="top" secondItem="Ylf-GC-HUA" secondAttribute="top" id="1am-a9-sy1"/>
+                            <constraint firstItem="mds-gc-U1U" firstAttribute="leading" secondItem="Ylf-GC-HUA" secondAttribute="leading" constant="87" id="h8e-id-jsw"/>
+                            <constraint firstItem="mds-gc-U1U" firstAttribute="centerX" secondItem="T31-0B-Agp" secondAttribute="centerX" id="htL-ni-MV6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="成员管理" image="person.2.square.stack" catalog="system" id="xel-dR-u7U"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lNL-Kx-f7o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2908" y="493"/>
+        </scene>
+        <!--图书资源-->
+        <scene sceneID="x83-JS-DBi">
+            <objects>
+                <viewController id="UnD-TX-bJ0" customClass="LibraryViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5VA-Xy-6fI">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-CW-2hq">
+                                <rect key="frame" x="87" y="44" width="216" height="32"/>
+                                <segments>
+                                    <segment title="物资借用"/>
+                                    <segment title="图书归还"/>
+                                    <segment title="借用历史"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bN5-f1-2lK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zbE-CW-2hq" firstAttribute="top" secondItem="bN5-f1-2lK" secondAttribute="top" id="JPx-Uu-gbH"/>
+                            <constraint firstItem="zbE-CW-2hq" firstAttribute="centerX" secondItem="5VA-Xy-6fI" secondAttribute="centerX" id="dcO-Om-i2a"/>
+                            <constraint firstItem="zbE-CW-2hq" firstAttribute="leading" secondItem="bN5-f1-2lK" secondAttribute="leading" constant="87" id="kaU-BH-SHt"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="图书资源" image="books.vertical" catalog="system" id="dvw-Ef-cyq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fba-Ik-Sjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2016.9230769230769" y="-804.02843601895734"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cbD-8O-JCC">
+            <objects>
+                <tabBarController storyboardIdentifier="HomePage" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ItB-6E-RYV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uc5-e5-AVM">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2z4-cS-nGp" kind="relationship" relationship="viewControllers" id="eFD-xH-11j"/>
+                        <segue destination="UnD-TX-bJ0" kind="relationship" relationship="viewControllers" id="KGC-pO-lxK"/>
+                        <segue destination="Zm0-Lw-s8J" kind="relationship" relationship="viewControllers" id="Itj-Xb-5uM"/>
+                        <segue destination="YtP-LG-kDD" kind="relationship" relationship="viewControllers" id="uNu-a7-J0j"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3c2-Tn-A9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087.6923076923076" y="96.682464454976298"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Logo" width="1080" height="1080"/>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
+        <image name="laptopcomputer.and.iphone" catalog="system" width="128" height="74"/>
+        <image name="person.2.square.stack" catalog="system" width="113" height="128"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

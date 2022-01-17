@@ -15,8 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1zH-cE-DAc">
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-vY-DN1">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1zH-cE-DAc" secondAttribute="height" multiplier="1:1" id="4F6-OB-hyg"/>
+                                    <constraint firstAttribute="width" constant="250" id="Fpf-oj-agU"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1zH-cE-DAc" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="WIl-qM-hRu"/>
+                            <constraint firstItem="1zH-cE-DAc" firstAttribute="width" secondItem="1zH-cE-DAc" secondAttribute="height" multiplier="1:1" id="fKo-3X-fDG"/>
+                            <constraint firstItem="1zH-cE-DAc" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xcy-vL-6hK"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -25,6 +44,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="1080" height="1080"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

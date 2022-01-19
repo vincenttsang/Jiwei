@@ -7,13 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21C7557C4EB58E05468D6539EA5063F6 /* Pods-JiweiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC35C956419FF07CFF1C6512C36AF834 /* Pods-JiweiTests-dummy.m */; };
-		A8CF3F128F09EF9FA871BDB4D99F22FB /* Pods-Jiwei-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B6A9CEE12A3E39CC80CFC8C0296795 /* Pods-Jiwei-dummy.m */; };
-		EC67A63DDC55979C0107DA09DE463775 /* Pods-Jiwei-JiweiUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6C79DB3970AC7C3C8D9997C75D7AD /* Pods-Jiwei-JiweiUITests-dummy.m */; };
+		0019B35378ED3D2369FEE316EFECDB4F /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C2606C661F123F4755C4B95F2B6FDD /* HTTPMethod.swift */; };
+		0B64F38B500E776A1C18B3FDFC825B1F /* Pods-Jiwei-JiweiUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 259FE34BE2289D2B9843B1D0FFE6EE49 /* Pods-Jiwei-JiweiUITests-dummy.m */; };
+		0F3A4BF45EB347F260E9CEA30BF8E0D0 /* OperationQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DBB551BA5127288C37AC1F0682C9CD /* OperationQueue+Alamofire.swift */; };
+		14FE7EB2D0D68A6AC9D344D4B9511623 /* MultipartUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5610B8D3E3A9B2F51EC51912A0EFDED2 /* MultipartUpload.swift */; };
+		16EFFFE378C89CF629BB4468AEA3D965 /* Pods-Jiwei-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0688FE384189652B9D7AC90B3E10629F /* Pods-Jiwei-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1A59262FCFD9BFF4B64C5FAF3D882C94 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FC46BF0C199B8CD357E4FB564C59A6FA /* Alamofire-dummy.m */; };
+		1AC305BC3A04B70E9C27EAADF1E87370 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D052768F54071CBD1749D7C5569E47FC /* MultipartFormData.swift */; };
+		206AC44D69E60B08421630CCB9089BB9 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A2048B69799397F807A8C21AC7D09D /* AFError.swift */; };
+		21C7557C4EB58E05468D6539EA5063F6 /* Pods-JiweiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1090919E69F7C3171050997CCE2AF /* Pods-JiweiTests-dummy.m */; };
+		298FDEAB25B497847F9FCF1BDA6AE3AC /* Pods-Jiwei-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B924D2EF3FECCD138FDA23E55DBA4BA0 /* Pods-Jiwei-dummy.m */; };
+		2A2ADEB04DBA4E43E6917CD0AC3D7BCD /* RequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBC853B52C8BFBE8462C1F802308D86 /* RequestInterceptor.swift */; };
+		304FB3C38AE6DC166107F6C473E425EB /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDC23D39CE5C1A8A64047698537B7CA /* DispatchQueue+Alamofire.swift */; };
+		3183E9DEEB94D439AAD2BC27296C429B /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9510990BD007AE1715035EBFD02B6 /* EventMonitor.swift */; };
+		3ACCC210D99273E5B55DFB3143B2FBB0 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C653343A849EF77382EF0697151A43B /* Session.swift */; };
+		403C1A6FDD37DC29BCFA123169373EB1 /* RedirectHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C042447C34FF5DD3658D8A93C00979CB /* RedirectHandler.swift */; };
+		5256304C3A6CC911C9582933F61BD7C6 /* AuthenticationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4733E1FC50B27850A1D34DFAD273953 /* AuthenticationInterceptor.swift */; };
+		54AFACCEFEFA248940E7149B4BE2D33D /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A321956CC01C7A70DF10C43754ED0D /* Notifications.swift */; };
+		570C771692B1BC20B396F57D4B2E6DDD /* Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599C652D6E36FA95DD47E501305D5069 /* Concurrency.swift */; };
+		64236BEFC4D6A44114F03DCC793E324A /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C178EAE44B78B31519944E407EA870 /* NetworkReachabilityManager.swift */; };
+		6441859490B6E35AD7C6313CF26039A6 /* URLConvertible+URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8880D1C79756CDED75380DD52238E4 /* URLConvertible+URLRequestConvertible.swift */; };
+		64AF46A6FAEC275B7F557891552F39AF /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC265C235868CD09DDE9CB897F538A7F /* CachedResponseHandler.swift */; };
+		64B4F8EF6F460A3A03052D960D3996DA /* URLSessionConfiguration+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F57743BD337B9AE7A5CE5197BB456C7 /* URLSessionConfiguration+Alamofire.swift */; };
+		6C2DA7A4B93286E451E207531DBEFD28 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7934E4B0526C7B2575E1614E8B07C11C /* Combine.swift */; };
+		736FC019054CBBAFF2BB15B037DDAA2B /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9BD438F4A3F27B1E8E2DA492834E8 /* Response.swift */; };
+		7DA7FDDBE33F61A3510ABA01B1746557 /* ServerTrustEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61E53B1A07301105F67A5164E94B18E /* ServerTrustEvaluation.swift */; };
+		857DB9FC2B2F8E9A19819E86D4834F32 /* Result+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E985605EE171E856FC88707CA69B779 /* Result+Alamofire.swift */; };
+		8DB20A53A0DCAD67FB7203B0B398EADB /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CA09AB1E2B8D0460D7887D0F89762 /* SessionDelegate.swift */; };
+		8EFF424EADF227A5EBAC27F609EED78A /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AA1AEC7F7D5FF1C36859F53CE404FC /* ResponseSerialization.swift */; };
+		939BD58AE573D1FADFC8EA257E3F0315 /* Pods-Jiwei-JiweiUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6947F23F9F03FC18191D63ADD2A8C5F6 /* Pods-Jiwei-JiweiUITests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		948C22EBF7EB1AA6C0799EAA3C9D4913 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B526A4B120854B4497D463A6B11B6F /* Alamofire.swift */; };
+		A17125A88624B260F3A9784178548DF8 /* Protected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450EF561F8B12669B1960E97A48E5849 /* Protected.swift */; };
+		AD9606D6D0220349B982374335206F6C /* URLEncodedFormEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F98F49186E493AC2E6CC3B3B4BAA6E2 /* URLEncodedFormEncoder.swift */; };
+		B37CD6EAD635AFF01F0E469FAF093E19 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06089D9D39F7BBD9D5F69C6A92E4236B /* RequestTaskMap.swift */; };
+		B4B0865429DFB6E80F22985012794373 /* RetryPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8E5E80D843A2A878180AFFA44BA78C /* RetryPolicy.swift */; };
+		C47D52AB668D3F610B0F261474514004 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABCF6B0B79438E7C3DDF2ED4295AE7 /* Request.swift */; };
+		C57B4548259BEFC62030C521A2E24060 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F24A4017D92EFBD8D4E666FFF7D798C /* ParameterEncoder.swift */; };
+		D3789959C302059FB76737F620F200AE /* URLRequest+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D44C7E98B3890F96D02C3F7C6F11C86 /* URLRequest+Alamofire.swift */; };
+		D798BAC1E49257A62FA7C90C04BB497D /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1600655D62F87E0843DAF03E077AB4FC /* HTTPHeaders.swift */; };
+		E8807E83B9D5B48D4ED1777D947A0F03 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF121B0507F69F3E20DEDD2E499757E9 /* ParameterEncoding.swift */; };
+		E8BDC4FD74022B969612B201B15337EF /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53636EAFC35C7CBE73D7E9AA81B6D0B0 /* Validation.swift */; };
+		F4CBE49814F0B87CD1412DBED0A9481D /* StringEncoding+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F03E051782F8647AFCC6C48F97BE58 /* StringEncoding+Alamofire.swift */; };
+		F7870B4717E7A4EB821B5915198E3CAF /* AlamofireExtended.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DAD487AB9CB3804CDE2EA9EE05E34E /* AlamofireExtended.swift */; };
+		F89DD3850F1801FA7109FB9F7833ADE7 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 301D8C65F4028B71FD32CC217DB353FE /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3DF1876EC924A360E4F1D90C9E7E0340 /* PBXContainerItemProxy */ = {
+		DEC9E5E48F34CFEEA1E556823317D34A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		FAA537207A9D139F375357AA0FFA52AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAAA1AD3A8A1B59AB91319EE40752C6D;
+			remoteInfo = Alamofire;
+		};
+		FEFD6AA36C3E5029408409EE612042A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -23,28 +77,82 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05F6014150239A664E009BBA17A3BD09 /* Pods-Jiwei-JiweiUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jiwei-JiweiUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1AB6C79DB3970AC7C3C8D9997C75D7AD /* Pods-Jiwei-JiweiUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jiwei-JiweiUITests-dummy.m"; sourceTree = "<group>"; };
-		2CFA4560B1BFF9AB02FBA737F220611D /* Pods-JiweiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JiweiTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3B76BAEE60343629792EC58060E62B4F /* Pods-Jiwei-JiweiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jiwei-JiweiUITests.release.xcconfig"; sourceTree = "<group>"; };
-		4B7D22B623B7568211674D0B19DDC4F1 /* Pods-JiweiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JiweiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		00DAD487AB9CB3804CDE2EA9EE05E34E /* AlamofireExtended.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlamofireExtended.swift; path = Source/AlamofireExtended.swift; sourceTree = "<group>"; };
+		032A9BDAA6621F75BB00F86ABFBD7EFE /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		03F03E051782F8647AFCC6C48F97BE58 /* StringEncoding+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "StringEncoding+Alamofire.swift"; path = "Source/StringEncoding+Alamofire.swift"; sourceTree = "<group>"; };
+		06089D9D39F7BBD9D5F69C6A92E4236B /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
+		0688FE384189652B9D7AC90B3E10629F /* Pods-Jiwei-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jiwei-umbrella.h"; sourceTree = "<group>"; };
+		0AAF7EEC329B236E8B2235385AB5D972 /* Pods-JiweiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JiweiTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		0DF1090919E69F7C3171050997CCE2AF /* Pods-JiweiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JiweiTests-dummy.m"; sourceTree = "<group>"; };
+		0E985605EE171E856FC88707CA69B779 /* Result+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Result+Alamofire.swift"; path = "Source/Result+Alamofire.swift"; sourceTree = "<group>"; };
+		1600655D62F87E0843DAF03E077AB4FC /* HTTPHeaders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPHeaders.swift; path = Source/HTTPHeaders.swift; sourceTree = "<group>"; };
+		1F57743BD337B9AE7A5CE5197BB456C7 /* URLSessionConfiguration+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Alamofire.swift"; path = "Source/URLSessionConfiguration+Alamofire.swift"; sourceTree = "<group>"; };
+		259FE34BE2289D2B9843B1D0FFE6EE49 /* Pods-Jiwei-JiweiUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jiwei-JiweiUITests-dummy.m"; sourceTree = "<group>"; };
+		29C178EAE44B78B31519944E407EA870 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		2F98F49186E493AC2E6CC3B3B4BAA6E2 /* URLEncodedFormEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLEncodedFormEncoder.swift; path = Source/URLEncodedFormEncoder.swift; sourceTree = "<group>"; };
+		301D8C65F4028B71FD32CC217DB353FE /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		31ABCF6B0B79438E7C3DDF2ED4295AE7 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		31F9510990BD007AE1715035EBFD02B6 /* EventMonitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EventMonitor.swift; path = Source/EventMonitor.swift; sourceTree = "<group>"; };
+		3E8880D1C79756CDED75380DD52238E4 /* URLConvertible+URLRequestConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLConvertible+URLRequestConvertible.swift"; path = "Source/URLConvertible+URLRequestConvertible.swift"; sourceTree = "<group>"; };
+		4401C61B84B685A99D6B721F637B3F0B /* Pods-Jiwei-JiweiUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Jiwei-JiweiUITests.modulemap"; sourceTree = "<group>"; };
+		44A2048B69799397F807A8C21AC7D09D /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		450EF561F8B12669B1960E97A48E5849 /* Protected.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protected.swift; path = Source/Protected.swift; sourceTree = "<group>"; };
+		50DBB551BA5127288C37AC1F0682C9CD /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		53636EAFC35C7CBE73D7E9AA81B6D0B0 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		5610B8D3E3A9B2F51EC51912A0EFDED2 /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
+		56A9BD438F4A3F27B1E8E2DA492834E8 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		599C652D6E36FA95DD47E501305D5069 /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Concurrency.swift; sourceTree = "<group>"; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = Alamofire; path = libAlamofire.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6947F23F9F03FC18191D63ADD2A8C5F6 /* Pods-Jiwei-JiweiUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Jiwei-JiweiUITests-umbrella.h"; sourceTree = "<group>"; };
 		6C23C04E0274A01D8710382AD51AECA1 /* Pods-Jiwei-JiweiUITests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-Jiwei-JiweiUITests"; path = "libPods-Jiwei-JiweiUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D44C7E98B3890F96D02C3F7C6F11C86 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		70053DAB8AB7755BBC6FE0348CD91A08 /* Pods-JiweiTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-JiweiTests"; path = "libPods-JiweiTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		70EC981DBC7111414FA35E91D2DA82AD /* Pods-JiweiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiweiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		8028F42C050934D5E59EEAC031D330C7 /* Pods-Jiwei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jiwei.debug.xcconfig"; sourceTree = "<group>"; };
-		81B6A9CEE12A3E39CC80CFC8C0296795 /* Pods-Jiwei-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jiwei-dummy.m"; sourceTree = "<group>"; };
-		849805EAE0648F9E7A3E1AF7E20432DD /* Pods-JiweiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiweiTests.release.xcconfig"; sourceTree = "<group>"; };
+		771866202EB9E68B0543820B7D543C78 /* Pods-Jiwei.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Jiwei.modulemap"; sourceTree = "<group>"; };
+		789A360682ABF059449F7EB22797B1A7 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
+		7934E4B0526C7B2575E1614E8B07C11C /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
+		7BA4F9015B44877A9918FDE4926AE4B1 /* Pods-Jiwei-JiweiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jiwei-JiweiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7BDC23D39CE5C1A8A64047698537B7CA /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		815CA09AB1E2B8D0460D7887D0F89762 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
+		839F3E1D4FB90B10D248B54632ECD1AF /* Pods-JiweiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiweiTests.release.xcconfig"; sourceTree = "<group>"; };
+		86B526A4B120854B4497D463A6B11B6F /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		8C653343A849EF77382EF0697151A43B /* Session.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Session.swift; path = Source/Session.swift; sourceTree = "<group>"; };
+		8F24A4017D92EFBD8D4E666FFF7D798C /* ParameterEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoder.swift; path = Source/ParameterEncoder.swift; sourceTree = "<group>"; };
+		99AF6EB8E4B3364841A4D12DCA7CD38F /* Pods-Jiwei-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jiwei-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9AF7201BF3FD2378E4883A18EC722EDB /* Pods-Jiwei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jiwei.release.xcconfig"; sourceTree = "<group>"; };
+		9D8E5E80D843A2A878180AFFA44BA78C /* RetryPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RetryPolicy.swift; path = Source/RetryPolicy.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B42C17FC905B7A689DC9A3186E5FA83D /* Pods-Jiwei-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jiwei-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BC35C956419FF07CFF1C6512C36AF834 /* Pods-JiweiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JiweiTests-dummy.m"; sourceTree = "<group>"; };
-		C2F2049EAA5EDB4C8EB4E5832A077295 /* Pods-Jiwei-JiweiUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jiwei-JiweiUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CB998A05BCC6D2B28FFD00095F090553 /* Pods-Jiwei-JiweiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jiwei-JiweiUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB4C5DAF0645EE8A8BA8740C43BE6D9C /* Pods-Jiwei-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jiwei-acknowledgements.plist"; sourceTree = "<group>"; };
-		F7BF3D6E3B75C0151E132D089EB2AC6C /* Pods-Jiwei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jiwei.release.xcconfig"; sourceTree = "<group>"; };
+		9F246171D7D32BBC907E862E06D28B16 /* Pods-Jiwei-JiweiUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Jiwei-JiweiUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A4733E1FC50B27850A1D34DFAD273953 /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
+		A695C00E47C9F30455E17E272304CC30 /* Pods-Jiwei-JiweiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jiwei-JiweiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEBC853B52C8BFBE8462C1F802308D86 /* RequestInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestInterceptor.swift; path = Source/RequestInterceptor.swift; sourceTree = "<group>"; };
+		B1244BBE18BE2015C45BF233AB85DAB2 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		B924D2EF3FECCD138FDA23E55DBA4BA0 /* Pods-Jiwei-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Jiwei-dummy.m"; sourceTree = "<group>"; };
+		C042447C34FF5DD3658D8A93C00979CB /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Source/RedirectHandler.swift; sourceTree = "<group>"; };
+		C115591685BA5CEE730F2BA4E3AAC1E7 /* Pods-Jiwei-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jiwei-acknowledgements.plist"; sourceTree = "<group>"; };
+		CB0ED9760319091AFD54D5C8A4BAB63C /* Pods-JiweiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JiweiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D052768F54071CBD1749D7C5569E47FC /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		D61E53B1A07301105F67A5164E94B18E /* ServerTrustEvaluation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustEvaluation.swift; path = Source/ServerTrustEvaluation.swift; sourceTree = "<group>"; };
+		D694CEB651CA1210FCD8CA0A4D862C16 /* Pods-JiweiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JiweiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6A321956CC01C7A70DF10C43754ED0D /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		E3AA1AEC7F7D5FF1C36859F53CE404FC /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		E5C2606C661F123F4755C4B95F2B6FDD /* HTTPMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTTPMethod.swift; path = Source/HTTPMethod.swift; sourceTree = "<group>"; };
+		E749645B34775196A3C7C8332AE29413 /* Pods-Jiwei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Jiwei.debug.xcconfig"; sourceTree = "<group>"; };
+		EC265C235868CD09DDE9CB897F538A7F /* CachedResponseHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CachedResponseHandler.swift; path = Source/CachedResponseHandler.swift; sourceTree = "<group>"; };
+		EDB98644B2FE30B453AECA32F5414445 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
+		F3623B78ACC0E73EC4C03955342F68B7 /* Pods-Jiwei-JiweiUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Jiwei-JiweiUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FB7AD0861A81FB5AA66690CC1BB8B88C /* Pods-Jiwei */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-Jiwei"; path = "libPods-Jiwei.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC46BF0C199B8CD357E4FB564C59A6FA /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		FF121B0507F69F3E20DEDD2E499757E9 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		23F0C8ECA0D6885232C176A39D5F330A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		549823098BA93F7FCF041B9FB7D7929D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,14 +160,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1A4BD2D3E5FAC2380BFF7BEA5161D20 /* Frameworks */ = {
+		582FB4F3E54956EFEE6E9B5B4D8D7E62 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD7350DCF670C19370ECD547146B58BF /* Frameworks */ = {
+		BFC5268EB251E8BA55B7C7FA31302056 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -69,45 +177,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		164291117D013E2851F4B801BF6F2B5F /* Pods-JiweiTests */ = {
+		0B52D13CE5726CB39A3949E5ACF35133 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4B7D22B623B7568211674D0B19DDC4F1 /* Pods-JiweiTests-acknowledgements.markdown */,
-				2CFA4560B1BFF9AB02FBA737F220611D /* Pods-JiweiTests-acknowledgements.plist */,
-				BC35C956419FF07CFF1C6512C36AF834 /* Pods-JiweiTests-dummy.m */,
-				70EC981DBC7111414FA35E91D2DA82AD /* Pods-JiweiTests.debug.xcconfig */,
-				849805EAE0648F9E7A3E1AF7E20432DD /* Pods-JiweiTests.release.xcconfig */,
+				B1244BBE18BE2015C45BF233AB85DAB2 /* Alamofire.modulemap */,
+				FC46BF0C199B8CD357E4FB564C59A6FA /* Alamofire-dummy.m */,
+				032A9BDAA6621F75BB00F86ABFBD7EFE /* Alamofire-prefix.pch */,
+				301D8C65F4028B71FD32CC217DB353FE /* Alamofire-umbrella.h */,
+				789A360682ABF059449F7EB22797B1A7 /* Alamofire.debug.xcconfig */,
+				EDB98644B2FE30B453AECA32F5414445 /* Alamofire.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		1F70117896DEF5563D396A78B7DD826C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BA5BC49B0775CC20D2BDE9752B428E41 /* Pods-Jiwei */,
+				C650C1EC0FC7FAC04FC9F293593A8BE2 /* Pods-Jiwei-JiweiUITests */,
+				3B87AB98E330989F3557AB54AB945759 /* Pods-JiweiTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3B87AB98E330989F3557AB54AB945759 /* Pods-JiweiTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB0ED9760319091AFD54D5C8A4BAB63C /* Pods-JiweiTests-acknowledgements.markdown */,
+				0AAF7EEC329B236E8B2235385AB5D972 /* Pods-JiweiTests-acknowledgements.plist */,
+				0DF1090919E69F7C3171050997CCE2AF /* Pods-JiweiTests-dummy.m */,
+				D694CEB651CA1210FCD8CA0A4D862C16 /* Pods-JiweiTests.debug.xcconfig */,
+				839F3E1D4FB90B10D248B54632ECD1AF /* Pods-JiweiTests.release.xcconfig */,
 			);
 			name = "Pods-JiweiTests";
 			path = "Target Support Files/Pods-JiweiTests";
 			sourceTree = "<group>";
 		};
-		21F310CDC7881C64303A4ECB1D3106FE /* Pods-Jiwei */ = {
+		9BAB08BC9475B8E44E89C18BE0B47682 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B42C17FC905B7A689DC9A3186E5FA83D /* Pods-Jiwei-acknowledgements.markdown */,
-				DB4C5DAF0645EE8A8BA8740C43BE6D9C /* Pods-Jiwei-acknowledgements.plist */,
-				81B6A9CEE12A3E39CC80CFC8C0296795 /* Pods-Jiwei-dummy.m */,
-				8028F42C050934D5E59EEAC031D330C7 /* Pods-Jiwei.debug.xcconfig */,
-				F7BF3D6E3B75C0151E132D089EB2AC6C /* Pods-Jiwei.release.xcconfig */,
-			);
-			name = "Pods-Jiwei";
-			path = "Target Support Files/Pods-Jiwei";
-			sourceTree = "<group>";
-		};
-		6911B2ADE358E9DBEFCB98D266F99CE6 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				21F310CDC7881C64303A4ECB1D3106FE /* Pods-Jiwei */,
-				95338FD9099E10FBAE5494061A8A779B /* Pods-Jiwei-JiweiUITests */,
-				164291117D013E2851F4B801BF6F2B5F /* Pods-JiweiTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		7929516B160A9DB011292945F1A88873 /* Products */ = {
-			isa = PBXGroup;
-			children = (
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
 				FB7AD0861A81FB5AA66690CC1BB8B88C /* Pods-Jiwei */,
 				6C23C04E0274A01D8710382AD51AECA1 /* Pods-Jiwei-JiweiUITests */,
 				70053DAB8AB7755BBC6FE0348CD91A08 /* Pods-JiweiTests */,
@@ -115,14 +225,84 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95338FD9099E10FBAE5494061A8A779B /* Pods-Jiwei-JiweiUITests */ = {
+		9F4B67447122FC6BA6080EAA9B88A719 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				05F6014150239A664E009BBA17A3BD09 /* Pods-Jiwei-JiweiUITests-acknowledgements.markdown */,
-				C2F2049EAA5EDB4C8EB4E5832A077295 /* Pods-Jiwei-JiweiUITests-acknowledgements.plist */,
-				1AB6C79DB3970AC7C3C8D9997C75D7AD /* Pods-Jiwei-JiweiUITests-dummy.m */,
-				CB998A05BCC6D2B28FFD00095F090553 /* Pods-Jiwei-JiweiUITests.debug.xcconfig */,
-				3B76BAEE60343629792EC58060E62B4F /* Pods-Jiwei-JiweiUITests.release.xcconfig */,
+				ABA5AB8A16B7E9470D3A0F106F8CB416 /* Alamofire */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ABA5AB8A16B7E9470D3A0F106F8CB416 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				44A2048B69799397F807A8C21AC7D09D /* AFError.swift */,
+				86B526A4B120854B4497D463A6B11B6F /* Alamofire.swift */,
+				00DAD487AB9CB3804CDE2EA9EE05E34E /* AlamofireExtended.swift */,
+				A4733E1FC50B27850A1D34DFAD273953 /* AuthenticationInterceptor.swift */,
+				EC265C235868CD09DDE9CB897F538A7F /* CachedResponseHandler.swift */,
+				7934E4B0526C7B2575E1614E8B07C11C /* Combine.swift */,
+				599C652D6E36FA95DD47E501305D5069 /* Concurrency.swift */,
+				7BDC23D39CE5C1A8A64047698537B7CA /* DispatchQueue+Alamofire.swift */,
+				31F9510990BD007AE1715035EBFD02B6 /* EventMonitor.swift */,
+				1600655D62F87E0843DAF03E077AB4FC /* HTTPHeaders.swift */,
+				E5C2606C661F123F4755C4B95F2B6FDD /* HTTPMethod.swift */,
+				D052768F54071CBD1749D7C5569E47FC /* MultipartFormData.swift */,
+				5610B8D3E3A9B2F51EC51912A0EFDED2 /* MultipartUpload.swift */,
+				29C178EAE44B78B31519944E407EA870 /* NetworkReachabilityManager.swift */,
+				D6A321956CC01C7A70DF10C43754ED0D /* Notifications.swift */,
+				50DBB551BA5127288C37AC1F0682C9CD /* OperationQueue+Alamofire.swift */,
+				8F24A4017D92EFBD8D4E666FFF7D798C /* ParameterEncoder.swift */,
+				FF121B0507F69F3E20DEDD2E499757E9 /* ParameterEncoding.swift */,
+				450EF561F8B12669B1960E97A48E5849 /* Protected.swift */,
+				C042447C34FF5DD3658D8A93C00979CB /* RedirectHandler.swift */,
+				31ABCF6B0B79438E7C3DDF2ED4295AE7 /* Request.swift */,
+				AEBC853B52C8BFBE8462C1F802308D86 /* RequestInterceptor.swift */,
+				06089D9D39F7BBD9D5F69C6A92E4236B /* RequestTaskMap.swift */,
+				56A9BD438F4A3F27B1E8E2DA492834E8 /* Response.swift */,
+				E3AA1AEC7F7D5FF1C36859F53CE404FC /* ResponseSerialization.swift */,
+				0E985605EE171E856FC88707CA69B779 /* Result+Alamofire.swift */,
+				9D8E5E80D843A2A878180AFFA44BA78C /* RetryPolicy.swift */,
+				D61E53B1A07301105F67A5164E94B18E /* ServerTrustEvaluation.swift */,
+				8C653343A849EF77382EF0697151A43B /* Session.swift */,
+				815CA09AB1E2B8D0460D7887D0F89762 /* SessionDelegate.swift */,
+				03F03E051782F8647AFCC6C48F97BE58 /* StringEncoding+Alamofire.swift */,
+				3E8880D1C79756CDED75380DD52238E4 /* URLConvertible+URLRequestConvertible.swift */,
+				2F98F49186E493AC2E6CC3B3B4BAA6E2 /* URLEncodedFormEncoder.swift */,
+				6D44C7E98B3890F96D02C3F7C6F11C86 /* URLRequest+Alamofire.swift */,
+				1F57743BD337B9AE7A5CE5197BB456C7 /* URLSessionConfiguration+Alamofire.swift */,
+				53636EAFC35C7CBE73D7E9AA81B6D0B0 /* Validation.swift */,
+				0B52D13CE5726CB39A3949E5ACF35133 /* Support Files */,
+			);
+			name = Alamofire;
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		BA5BC49B0775CC20D2BDE9752B428E41 /* Pods-Jiwei */ = {
+			isa = PBXGroup;
+			children = (
+				771866202EB9E68B0543820B7D543C78 /* Pods-Jiwei.modulemap */,
+				99AF6EB8E4B3364841A4D12DCA7CD38F /* Pods-Jiwei-acknowledgements.markdown */,
+				C115591685BA5CEE730F2BA4E3AAC1E7 /* Pods-Jiwei-acknowledgements.plist */,
+				B924D2EF3FECCD138FDA23E55DBA4BA0 /* Pods-Jiwei-dummy.m */,
+				0688FE384189652B9D7AC90B3E10629F /* Pods-Jiwei-umbrella.h */,
+				E749645B34775196A3C7C8332AE29413 /* Pods-Jiwei.debug.xcconfig */,
+				9AF7201BF3FD2378E4883A18EC722EDB /* Pods-Jiwei.release.xcconfig */,
+			);
+			name = "Pods-Jiwei";
+			path = "Target Support Files/Pods-Jiwei";
+			sourceTree = "<group>";
+		};
+		C650C1EC0FC7FAC04FC9F293593A8BE2 /* Pods-Jiwei-JiweiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4401C61B84B685A99D6B721F637B3F0B /* Pods-Jiwei-JiweiUITests.modulemap */,
+				9F246171D7D32BBC907E862E06D28B16 /* Pods-Jiwei-JiweiUITests-acknowledgements.markdown */,
+				F3623B78ACC0E73EC4C03955342F68B7 /* Pods-Jiwei-JiweiUITests-acknowledgements.plist */,
+				259FE34BE2289D2B9843B1D0FFE6EE49 /* Pods-Jiwei-JiweiUITests-dummy.m */,
+				6947F23F9F03FC18191D63ADD2A8C5F6 /* Pods-Jiwei-JiweiUITests-umbrella.h */,
+				A695C00E47C9F30455E17E272304CC30 /* Pods-Jiwei-JiweiUITests.debug.xcconfig */,
+				7BA4F9015B44877A9918FDE4926AE4B1 /* Pods-Jiwei-JiweiUITests.release.xcconfig */,
 			);
 			name = "Pods-Jiwei-JiweiUITests";
 			path = "Target Support Files/Pods-Jiwei-JiweiUITests";
@@ -133,8 +313,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				7929516B160A9DB011292945F1A88873 /* Products */,
-				6911B2ADE358E9DBEFCB98D266F99CE6 /* Targets Support Files */,
+				9F4B67447122FC6BA6080EAA9B88A719 /* Pods */,
+				9BAB08BC9475B8E44E89C18BE0B47682 /* Products */,
+				1F70117896DEF5563D396A78B7DD826C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,17 +329,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		52368048734988E57181C27BE3494313 /* Headers */ = {
+		149297D5D2ACEAE6862CED621CEF8FD3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16EFFFE378C89CF629BB4468AEA3D965 /* Pods-Jiwei-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6CB088D9A7BF040FF5B5B0E35AA5827F /* Headers */ = {
+		6FFAD448B1AC76CAC5936557DABACD7C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				939BD58AE573D1FADFC8EA257E3F0315 /* Pods-Jiwei-JiweiUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,20 +352,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8CFA644AC70327B595F0618D938A0075 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89DD3850F1801FA7109FB9F7833ADE7 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2FE4DF64AE4BFE143A836F0DF8D13F19 /* Pods-Jiwei */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBA46A4FEAE864D242F87D5DC6CD7124 /* Build configuration list for PBXNativeTarget "Pods-Jiwei" */;
+			buildConfigurationList = 43D8A10BEFBF39A0E84E6F5DD5127550 /* Build configuration list for PBXNativeTarget "Pods-Jiwei" */;
 			buildPhases = (
-				6CB088D9A7BF040FF5B5B0E35AA5827F /* Headers */,
-				858FCD06B563694E3172456586A6CDF0 /* Sources */,
-				CD7350DCF670C19370ECD547146B58BF /* Frameworks */,
+				149297D5D2ACEAE6862CED621CEF8FD3 /* Headers */,
+				59F24D9FCA7BC447247F6BAD02DA2D84 /* Sources */,
+				582FB4F3E54956EFEE6E9B5B4D8D7E62 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0AC62A91FCEC2B61FC2FB490DFAE354B /* PBXTargetDependency */,
 			);
 			name = "Pods-Jiwei";
 			productName = "Pods-Jiwei";
@@ -200,7 +392,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				DE37A406296902D49E41CCE36E4985AF /* PBXTargetDependency */,
+				BF5619B643EF4EADD6EF022C197445B8 /* PBXTargetDependency */,
 			);
 			name = "Pods-JiweiTests";
 			productName = "Pods-JiweiTests";
@@ -209,19 +401,38 @@
 		};
 		945D949644797767F20410F13BB77961 /* Pods-Jiwei-JiweiUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9E76E5D3637C6E38CA971CF01815363 /* Build configuration list for PBXNativeTarget "Pods-Jiwei-JiweiUITests" */;
+			buildConfigurationList = E28575937E811F729A89FAA924FE6035 /* Build configuration list for PBXNativeTarget "Pods-Jiwei-JiweiUITests" */;
 			buildPhases = (
-				52368048734988E57181C27BE3494313 /* Headers */,
-				FEADBCC220E97E6A6205777AA6A8F9E3 /* Sources */,
-				B1A4BD2D3E5FAC2380BFF7BEA5161D20 /* Frameworks */,
+				6FFAD448B1AC76CAC5936557DABACD7C /* Headers */,
+				AB16DF4BE313735FA0587248CA228AA7 /* Sources */,
+				23F0C8ECA0D6885232C176A39D5F330A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8AD1ECB10EF1FDCA7D9D18D52BCF5EC0 /* PBXTargetDependency */,
+			);
+			name = "Pods-Jiwei-JiweiUITests";
+			productName = "Pods-Jiwei-JiweiUITests";
+			productReference = 6C23C04E0274A01D8710382AD51AECA1 /* Pods-Jiwei-JiweiUITests */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E237E45E9DD0D05D20AD8F6D43A1A6 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				8CFA644AC70327B595F0618D938A0075 /* Headers */,
+				B530211E9626E95591A62A92268E4739 /* Sources */,
+				BFC5268EB251E8BA55B7C7FA31302056 /* Frameworks */,
+				8AA0D6B86123E53EF7C49E57D7F85B35 /* Copy generated compatibility header */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Jiwei-JiweiUITests";
-			productName = "Pods-Jiwei-JiweiUITests";
-			productReference = 6C23C04E0274A01D8710382AD51AECA1 /* Pods-Jiwei-JiweiUITests */;
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -242,10 +453,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 7929516B160A9DB011292945F1A88873 /* Products */;
+			productRefGroup = 9BAB08BC9475B8E44E89C18BE0B47682 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */,
 				2FE4DF64AE4BFE143A836F0DF8D13F19 /* Pods-Jiwei */,
 				945D949644797767F20410F13BB77961 /* Pods-Jiwei-JiweiUITests */,
 				929A4CBF4840C9E7E00DA6686A287207 /* Pods-JiweiTests */,
@@ -253,12 +465,39 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8AA0D6B86123E53EF7C49E57D7F85B35 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire.modulemap",
+				"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Alamofire/Alamofire-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		858FCD06B563694E3172456586A6CDF0 /* Sources */ = {
+		59F24D9FCA7BC447247F6BAD02DA2D84 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8CF3F128F09EF9FA871BDB4D99F22FB /* Pods-Jiwei-dummy.m in Sources */,
+				298FDEAB25B497847F9FCF1BDA6AE3AC /* Pods-Jiwei-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,26 +509,104 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEADBCC220E97E6A6205777AA6A8F9E3 /* Sources */ = {
+		AB16DF4BE313735FA0587248CA228AA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC67A63DDC55979C0107DA09DE463775 /* Pods-Jiwei-JiweiUITests-dummy.m in Sources */,
+				0B64F38B500E776A1C18B3FDFC825B1F /* Pods-Jiwei-JiweiUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B530211E9626E95591A62A92268E4739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				206AC44D69E60B08421630CCB9089BB9 /* AFError.swift in Sources */,
+				948C22EBF7EB1AA6C0799EAA3C9D4913 /* Alamofire.swift in Sources */,
+				1A59262FCFD9BFF4B64C5FAF3D882C94 /* Alamofire-dummy.m in Sources */,
+				F7870B4717E7A4EB821B5915198E3CAF /* AlamofireExtended.swift in Sources */,
+				5256304C3A6CC911C9582933F61BD7C6 /* AuthenticationInterceptor.swift in Sources */,
+				64AF46A6FAEC275B7F557891552F39AF /* CachedResponseHandler.swift in Sources */,
+				6C2DA7A4B93286E451E207531DBEFD28 /* Combine.swift in Sources */,
+				570C771692B1BC20B396F57D4B2E6DDD /* Concurrency.swift in Sources */,
+				304FB3C38AE6DC166107F6C473E425EB /* DispatchQueue+Alamofire.swift in Sources */,
+				3183E9DEEB94D439AAD2BC27296C429B /* EventMonitor.swift in Sources */,
+				D798BAC1E49257A62FA7C90C04BB497D /* HTTPHeaders.swift in Sources */,
+				0019B35378ED3D2369FEE316EFECDB4F /* HTTPMethod.swift in Sources */,
+				1AC305BC3A04B70E9C27EAADF1E87370 /* MultipartFormData.swift in Sources */,
+				14FE7EB2D0D68A6AC9D344D4B9511623 /* MultipartUpload.swift in Sources */,
+				64236BEFC4D6A44114F03DCC793E324A /* NetworkReachabilityManager.swift in Sources */,
+				54AFACCEFEFA248940E7149B4BE2D33D /* Notifications.swift in Sources */,
+				0F3A4BF45EB347F260E9CEA30BF8E0D0 /* OperationQueue+Alamofire.swift in Sources */,
+				C57B4548259BEFC62030C521A2E24060 /* ParameterEncoder.swift in Sources */,
+				E8807E83B9D5B48D4ED1777D947A0F03 /* ParameterEncoding.swift in Sources */,
+				A17125A88624B260F3A9784178548DF8 /* Protected.swift in Sources */,
+				403C1A6FDD37DC29BCFA123169373EB1 /* RedirectHandler.swift in Sources */,
+				C47D52AB668D3F610B0F261474514004 /* Request.swift in Sources */,
+				2A2ADEB04DBA4E43E6917CD0AC3D7BCD /* RequestInterceptor.swift in Sources */,
+				B37CD6EAD635AFF01F0E469FAF093E19 /* RequestTaskMap.swift in Sources */,
+				736FC019054CBBAFF2BB15B037DDAA2B /* Response.swift in Sources */,
+				8EFF424EADF227A5EBAC27F609EED78A /* ResponseSerialization.swift in Sources */,
+				857DB9FC2B2F8E9A19819E86D4834F32 /* Result+Alamofire.swift in Sources */,
+				B4B0865429DFB6E80F22985012794373 /* RetryPolicy.swift in Sources */,
+				7DA7FDDBE33F61A3510ABA01B1746557 /* ServerTrustEvaluation.swift in Sources */,
+				3ACCC210D99273E5B55DFB3143B2FBB0 /* Session.swift in Sources */,
+				8DB20A53A0DCAD67FB7203B0B398EADB /* SessionDelegate.swift in Sources */,
+				F4CBE49814F0B87CD1412DBED0A9481D /* StringEncoding+Alamofire.swift in Sources */,
+				6441859490B6E35AD7C6313CF26039A6 /* URLConvertible+URLRequestConvertible.swift in Sources */,
+				AD9606D6D0220349B982374335206F6C /* URLEncodedFormEncoder.swift in Sources */,
+				D3789959C302059FB76737F620F200AE /* URLRequest+Alamofire.swift in Sources */,
+				64B4F8EF6F460A3A03052D960D3996DA /* URLSessionConfiguration+Alamofire.swift in Sources */,
+				E8BDC4FD74022B969612B201B15337EF /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DE37A406296902D49E41CCE36E4985AF /* PBXTargetDependency */ = {
+		0AC62A91FCEC2B61FC2FB490DFAE354B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = DEC9E5E48F34CFEEA1E556823317D34A /* PBXContainerItemProxy */;
+		};
+		8AD1ECB10EF1FDCA7D9D18D52BCF5EC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */;
+			targetProxy = FAA537207A9D139F375357AA0FFA52AB /* PBXContainerItemProxy */;
+		};
+		BF5619B643EF4EADD6EF022C197445B8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Jiwei";
 			target = 2FE4DF64AE4BFE143A836F0DF8D13F19 /* Pods-Jiwei */;
-			targetProxy = 3DF1876EC924A360E4F1D90C9E7E0340 /* PBXContainerItemProxy */;
+			targetProxy = FEFD6AA36C3E5029408409EE612042A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		07991F51B63531C738C1FFA05DA25930 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A695C00E47C9F30455E17E272304CC30 /* Pods-Jiwei-JiweiUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Jiwei-JiweiUITests/Pods-Jiwei-JiweiUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -358,7 +675,7 @@
 		};
 		5387316D5F7BDA6A2BD8CE606BA53562 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70EC981DBC7111414FA35E91D2DA82AD /* Pods-JiweiTests.debug.xcconfig */;
+			baseConfigurationReference = D694CEB651CA1210FCD8CA0A4D862C16 /* Pods-JiweiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -377,9 +694,9 @@
 			};
 			name = Debug;
 		};
-		5AC54CBE4BF04B86D344B83B01165BFA /* Release */ = {
+		5417D06149E3B13B628F00E322CDA799 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B76BAEE60343629792EC58060E62B4F /* Pods-Jiwei-JiweiUITests.release.xcconfig */;
+			baseConfigurationReference = 9AF7201BF3FD2378E4883A18EC722EDB /* Pods-Jiwei.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -388,6 +705,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Jiwei/Pods-Jiwei.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -401,7 +719,7 @@
 		};
 		5B1F39B48FFEFB98C49B5FC23616A3DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 849805EAE0648F9E7A3E1AF7E20432DD /* Pods-JiweiTests.release.xcconfig */;
+			baseConfigurationReference = 839F3E1D4FB90B10D248B54632ECD1AF /* Pods-JiweiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -421,9 +739,9 @@
 			};
 			name = Release;
 		};
-		878096ADBD4FF28DB5A2ADBC6372C3FA /* Debug */ = {
+		5E6BDDFAAF7FE12A8364FB0EBF4B221F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8028F42C050934D5E59EEAC031D330C7 /* Pods-Jiwei.debug.xcconfig */;
+			baseConfigurationReference = 7BA4F9015B44877A9918FDE4926AE4B1 /* Pods-Jiwei-JiweiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -432,6 +750,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Jiwei-JiweiUITests/Pods-Jiwei-JiweiUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -439,26 +758,57 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		AA0B659645704846D7E882F0E8065DA5 /* Debug */ = {
+		76A70CC8619B558FDBE7FECB340368F2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB998A05BCC6D2B28FFD00095F090553 /* Pods-Jiwei-JiweiUITests.debug.xcconfig */;
+			baseConfigurationReference = EDB98644B2FE30B453AECA32F5414445 /* Alamofire.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B67C5CF7A07A18E28D23E721552A36D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 789A360682ABF059449F7EB22797B1A7 /* Alamofire.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MODULEMAP_FILE = Headers/Public/Alamofire/Alamofire.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Alamofire;
+				PRODUCT_NAME = Alamofire;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.5;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -525,9 +875,9 @@
 			};
 			name = Release;
 		};
-		E909C72D80079512A889CF8ECAEC657F /* Release */ = {
+		E7BDD9C4118A04E11549F7569DE73395 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7BF3D6E3B75C0151E132D089EB2AC6C /* Pods-Jiwei.release.xcconfig */;
+			baseConfigurationReference = E749645B34775196A3C7C8332AE29413 /* Pods-Jiwei.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -536,6 +886,7 @@
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Jiwei/Pods-Jiwei.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -543,13 +894,21 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		43D8A10BEFBF39A0E84E6F5DD5127550 /* Build configuration list for PBXNativeTarget "Pods-Jiwei" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7BDD9C4118A04E11549F7569DE73395 /* Debug */,
+				5417D06149E3B13B628F00E322CDA799 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -568,20 +927,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9E76E5D3637C6E38CA971CF01815363 /* Build configuration list for PBXNativeTarget "Pods-Jiwei-JiweiUITests" */ = {
+		94E237E45E9DD0D05D20AD8F6D43A1A6 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA0B659645704846D7E882F0E8065DA5 /* Debug */,
-				5AC54CBE4BF04B86D344B83B01165BFA /* Release */,
+				B67C5CF7A07A18E28D23E721552A36D1 /* Debug */,
+				76A70CC8619B558FDBE7FECB340368F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBA46A4FEAE864D242F87D5DC6CD7124 /* Build configuration list for PBXNativeTarget "Pods-Jiwei" */ = {
+		E28575937E811F729A89FAA924FE6035 /* Build configuration list for PBXNativeTarget "Pods-Jiwei-JiweiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				878096ADBD4FF28DB5A2ADBC6372C3FA /* Debug */,
-				E909C72D80079512A889CF8ECAEC657F /* Release */,
+				07991F51B63531C738C1FFA05DA25930 /* Debug */,
+				5E6BDDFAAF7FE12A8364FB0EBF4B221F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

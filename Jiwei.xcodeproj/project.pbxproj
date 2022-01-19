@@ -12,7 +12,10 @@
 		BF5BBC8F2795BD96009C76EA /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5BBC8E2795BD96009C76EA /* LibraryViewController.swift */; };
 		BF5BBC912795BDF8009C76EA /* TaskCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5BBC902795BDF8009C76EA /* TaskCenterViewController.swift */; };
 		BF5BBC932795BE37009C76EA /* AdminManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5BBC922795BE36009C76EA /* AdminManagementViewController.swift */; };
-		BFE4CAC827950476001D7D06 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CAC727950476001D7D06 /* MyProfileViewController.swift */; };
+		BF64499D2796786A007297A9 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64499C2796786A007297A9 /* MyProfileViewController.swift */; };
+		BF64499F27967F1B007297A9 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64499E27967F1B007297A9 /* LoginAPI.swift */; };
+		BF6449A127968AD9007297A9 /* JiweiTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */; };
+		BFE4CAC827950476001D7D06 /* PersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */; };
 		BFE4CACC27952056001D7D06 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CACB27952056001D7D06 /* RestManager.swift */; };
 		BFE4CAD0279544DA001D7D06 /* ResponseStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */; };
 		BFE8E8BE2794255A00AE4781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */; };
@@ -56,7 +59,10 @@
 		BF5BBC8E2795BD96009C76EA /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		BF5BBC902795BDF8009C76EA /* TaskCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCenterViewController.swift; sourceTree = "<group>"; };
 		BF5BBC922795BE36009C76EA /* AdminManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminManagementViewController.swift; sourceTree = "<group>"; };
-		BFE4CAC727950476001D7D06 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		BF64499C2796786A007297A9 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		BF64499E27967F1B007297A9 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiTabBarController.swift; sourceTree = "<group>"; };
+		BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCenterViewController.swift; sourceTree = "<group>"; };
 		BFE4CACB27952056001D7D06 /* RestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestManager.swift; sourceTree = "<group>"; };
 		BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStructures.swift; sourceTree = "<group>"; };
 		BFE8E8BA2794255A00AE4781 /* Jiwei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jiwei.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,8 +166,9 @@
 				BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */,
 				BFE8E8BF2794255A00AE4781 /* SceneDelegate.swift */,
 				BFE8E8C12794255A00AE4781 /* LoginViewController.swift */,
+				BF64499E27967F1B007297A9 /* LoginAPI.swift */,
 				BF5BBC8E2795BD96009C76EA /* LibraryViewController.swift */,
-				BFE4CAC727950476001D7D06 /* MyProfileViewController.swift */,
+				BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */,
 				BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */,
 				BFE4CACB27952056001D7D06 /* RestManager.swift */,
 				BFE8E8C32794255A00AE4781 /* Main.storyboard */,
@@ -171,6 +178,8 @@
 				BFE8E8C62794255A00AE4781 /* Jiwei.xcdatamodeld */,
 				BF5BBC902795BDF8009C76EA /* TaskCenterViewController.swift */,
 				BF5BBC922795BE36009C76EA /* AdminManagementViewController.swift */,
+				BF64499C2796786A007297A9 /* MyProfileViewController.swift */,
+				BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */,
 			);
 			path = Jiwei;
 			sourceTree = "<group>";
@@ -396,10 +405,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFE4CAC827950476001D7D06 /* MyProfileViewController.swift in Sources */,
+				BFE4CAC827950476001D7D06 /* PersonalCenterViewController.swift in Sources */,
+				BF6449A127968AD9007297A9 /* JiweiTabBarController.swift in Sources */,
 				BF5BBC912795BDF8009C76EA /* TaskCenterViewController.swift in Sources */,
 				BFE8E8C22794255A00AE4781 /* LoginViewController.swift in Sources */,
 				BF5BBC8F2795BD96009C76EA /* LibraryViewController.swift in Sources */,
+				BF64499F27967F1B007297A9 /* LoginAPI.swift in Sources */,
+				BF64499D2796786A007297A9 /* MyProfileViewController.swift in Sources */,
 				BFE8E8BE2794255A00AE4781 /* AppDelegate.swift in Sources */,
 				BFE4CACC27952056001D7D06 /* RestManager.swift in Sources */,
 				BFE8E8C82794255A00AE4781 /* Jiwei.xcdatamodeld in Sources */,
@@ -596,6 +608,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -627,6 +640,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

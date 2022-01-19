@@ -1,4 +1,4 @@
-framework module Pods_Jiwei {
+module Pods_Jiwei {
   umbrella header "Pods-Jiwei-umbrella.h"
 
   export *

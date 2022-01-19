@@ -5,7 +5,7 @@ target 'Jiwei' do
   # Comment the next line if you don't want to use dynamic frameworks
   # Note it's NOT 'SideMenu'
   # Pods for Jiwei
-
+  pod 'Alamofire', '~> 5.5'
   target 'JiweiTests' do
     inherit! :search_paths
     # Pods for testing

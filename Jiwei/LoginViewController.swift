@@ -17,42 +17,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
-    private let LoginURL = "http://127.0.0.1:8080/member/login"
-    
     @IBAction func loginAction(sender: UIButton) {
-        guard let url = URL(string: LoginURL) else { return }
-        let rest = RestManager()
-        var msg: String = ""
-        var title: String = ""
-        var LoginResult:Member = Member()
-        
-        let semaphore = DispatchSemaphore(value: 0)
-        DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
-            msg = "Request timed out for 3000ms!"
-            semaphore.signal()
-        }
-        
-        rest.requestHttpHeaders.add(value: "application/json", forKey: "Content-Type")
-        rest.httpBodyParameters.add(value: username.text!, forKey: "account")
-        rest.httpBodyParameters.add(value: password.text!, forKey: "passwordMD5")
-        rest.httpBodyParameters.add(value: "", forKey: "role")
-        rest.makeRequest(toURL: url, withHttpMethod: .post) {
-            (results) in
-            guard let response = results.response else { return }
-            if response.httpStatusCode == 200 {
-                guard let data = results.data else { return }
-                let decoder = JSONDecoder()
-                guard let ResultObject = try? decoder.decode(Member.self, from: data) else { return }
-                print(ResultObject.description)
-                LoginResult = ResultObject
-            }
-            semaphore.signal()
-        }
-        
-        semaphore.wait()
+        goToTabBarController()
+        var msg:String = ""
+        let tryLogin = LoginAPI()
+        let LoginResult = tryLogin.TryLogin(username: "114514", password: "000000")
         if LoginResult.statusCode == "200" {
             title = "登录成功"
-            msg = "用户名: \(LoginResult.name!)\n角色: \(LoginResult.role!)"
+            msg = "用户名: \(LoginResult.name!)\n角色: \(LoginResult.role!)\nCookie:\(GlobalCookie)"
         } else {
             title = "登录失败"
             msg = "\(LoginResult.description)"
@@ -75,7 +47,7 @@ class LoginViewController: UIViewController {
     }
     
     private func goToTabBarController() {
-        if let TabBarController =  storyboard?.instantiateViewController(identifier: "HomePage") {
+        if let TabBarController =  storyboard?.instantiateViewController(identifier: "HomePage") as? JiweiTabBarController {
             TabBarController.modalPresentationStyle = .fullScreen
             present(TabBarController, animated: true, completion: nil)
         }

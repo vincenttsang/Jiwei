@@ -125,28 +125,59 @@
         <!--个人中心-->
         <scene sceneID="uXZ-Ys-EOZ">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="2z4-cS-nGp" customClass="MyProfileViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="2z4-cS-nGp" customClass="PersonalCenterViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nIL-YQ-kpH">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="7At-pI-Lc5">
-                                <rect key="frame" x="87" y="44" width="216" height="32"/>
+                                <rect key="frame" x="87" y="49" width="216" height="32"/>
                                 <segments>
-                                    <segment title="我的任务"/>
                                     <segment title="个人信息"/>
+                                    <segment title="我的任务"/>
                                 </segments>
+                                <connections>
+                                    <action selector="showComponent:" destination="2z4-cS-nGp" eventType="valueChanged" id="0yP-e4-LJi"/>
+                                </connections>
                             </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izg-Yx-Xyo">
+                                <rect key="frame" x="16" y="88" width="358" height="673"/>
+                                <connections>
+                                    <segue destination="oAt-3F-UOV" kind="embed" id="gb5-Oq-M03"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaE-vI-iev">
+                                <rect key="frame" x="16" y="88" width="358" height="673"/>
+                                <connections>
+                                    <segue destination="jHv-1s-Qy0" kind="embed" id="yMM-nQ-i3T"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k2U-sB-dLB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7At-pI-Lc5" firstAttribute="leading" secondItem="k2U-sB-dLB" secondAttribute="leading" constant="87" id="6SB-CS-1cY"/>
+                            <constraint firstItem="xaE-vI-iev" firstAttribute="top" secondItem="k2U-sB-dLB" secondAttribute="top" constant="44" id="FZC-Lp-BGY"/>
                             <constraint firstItem="7At-pI-Lc5" firstAttribute="centerX" secondItem="nIL-YQ-kpH" secondAttribute="centerX" id="GwF-kn-hUw"/>
-                            <constraint firstItem="7At-pI-Lc5" firstAttribute="top" secondItem="k2U-sB-dLB" secondAttribute="top" id="W2g-UW-fYa"/>
+                            <constraint firstItem="xaE-vI-iev" firstAttribute="trailing" secondItem="Izg-Yx-Xyo" secondAttribute="trailing" id="IU7-h0-qa1"/>
+                            <constraint firstItem="xaE-vI-iev" firstAttribute="leading" secondItem="Izg-Yx-Xyo" secondAttribute="leading" id="Juh-hJ-mI3"/>
+                            <constraint firstItem="Izg-Yx-Xyo" firstAttribute="top" secondItem="k2U-sB-dLB" secondAttribute="top" constant="44" id="Sv5-KB-rWP"/>
+                            <constraint firstItem="7At-pI-Lc5" firstAttribute="top" secondItem="k2U-sB-dLB" secondAttribute="top" constant="5" id="W2g-UW-fYa"/>
+                            <constraint firstItem="k2U-sB-dLB" firstAttribute="bottom" secondItem="xaE-vI-iev" secondAttribute="bottom" id="WoM-d5-B2M"/>
+                            <constraint firstItem="Izg-Yx-Xyo" firstAttribute="top" secondItem="nIL-YQ-kpH" secondAttribute="top" constant="88" id="i7h-Ka-CLs"/>
+                            <constraint firstItem="Izg-Yx-Xyo" firstAttribute="leading" secondItem="k2U-sB-dLB" secondAttribute="leading" constant="16" id="jP9-Nl-WRa"/>
+                            <constraint firstItem="k2U-sB-dLB" firstAttribute="trailing" secondItem="xaE-vI-iev" secondAttribute="trailing" constant="16" id="lRY-iy-cRi"/>
+                            <constraint firstItem="Izg-Yx-Xyo" firstAttribute="bottom" secondItem="k2U-sB-dLB" secondAttribute="bottom" id="mtH-h0-Mhu"/>
+                            <constraint firstItem="xaE-vI-iev" firstAttribute="leading" secondItem="k2U-sB-dLB" secondAttribute="leading" constant="16" id="s1M-dz-RW4"/>
+                            <constraint firstItem="k2U-sB-dLB" firstAttribute="trailing" secondItem="Izg-Yx-Xyo" secondAttribute="trailing" constant="16" id="sFh-Cr-rn1"/>
+                            <constraint firstItem="xaE-vI-iev" firstAttribute="bottom" secondItem="Izg-Yx-Xyo" secondAttribute="bottom" id="ycP-xp-RF2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="个人中心" image="person.fill" catalog="system" id="Iuv-iE-W2b"/>
+                    <connections>
+                        <outlet property="containerViewA" destination="Izg-Yx-Xyo" id="Kda-4p-iMK"/>
+                        <outlet property="containerViewB" destination="xaE-vI-iev" id="NiD-3E-yHG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UA-bj-GYY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +192,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K3B-lh-1Z9">
-                                <rect key="frame" x="87" y="44" width="216" height="32"/>
+                                <rect key="frame" x="87" y="49" width="216" height="32"/>
                                 <segments>
                                     <segment title="所有任务"/>
                                     <segment title="线上任务"/>
@@ -172,7 +203,7 @@
                         <viewLayoutGuide key="safeArea" id="4GW-vj-f0Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="K3B-lh-1Z9" firstAttribute="top" secondItem="4GW-vj-f0Y" secondAttribute="top" id="Z1A-LX-C9I"/>
+                            <constraint firstItem="K3B-lh-1Z9" firstAttribute="top" secondItem="4GW-vj-f0Y" secondAttribute="top" constant="5" id="Z1A-LX-C9I"/>
                             <constraint firstItem="K3B-lh-1Z9" firstAttribute="leading" secondItem="4GW-vj-f0Y" secondAttribute="leading" constant="87" id="o8t-dm-Fns"/>
                             <constraint firstItem="K3B-lh-1Z9" firstAttribute="centerX" secondItem="pKT-kO-57W" secondAttribute="centerX" id="zrJ-Co-IpG"/>
                         </constraints>
@@ -192,7 +223,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mds-gc-U1U">
-                                <rect key="frame" x="87" y="44" width="216" height="32"/>
+                                <rect key="frame" x="87" y="49" width="216" height="32"/>
                                 <segments>
                                     <segment title="队员管理"/>
                                     <segment title="接线员管理"/>
@@ -202,7 +233,7 @@
                         <viewLayoutGuide key="safeArea" id="Ylf-GC-HUA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mds-gc-U1U" firstAttribute="top" secondItem="Ylf-GC-HUA" secondAttribute="top" id="1am-a9-sy1"/>
+                            <constraint firstItem="mds-gc-U1U" firstAttribute="top" secondItem="Ylf-GC-HUA" secondAttribute="top" constant="5" id="1am-a9-sy1"/>
                             <constraint firstItem="mds-gc-U1U" firstAttribute="leading" secondItem="Ylf-GC-HUA" secondAttribute="leading" constant="87" id="h8e-id-jsw"/>
                             <constraint firstItem="mds-gc-U1U" firstAttribute="centerX" secondItem="T31-0B-Agp" secondAttribute="centerX" id="htL-ni-MV6"/>
                         </constraints>
@@ -222,7 +253,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-CW-2hq">
-                                <rect key="frame" x="87" y="44" width="216" height="32"/>
+                                <rect key="frame" x="87" y="49" width="216" height="32"/>
                                 <segments>
                                     <segment title="物资借用"/>
                                     <segment title="图书归还"/>
@@ -233,7 +264,7 @@
                         <viewLayoutGuide key="safeArea" id="bN5-f1-2lK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zbE-CW-2hq" firstAttribute="top" secondItem="bN5-f1-2lK" secondAttribute="top" id="JPx-Uu-gbH"/>
+                            <constraint firstItem="zbE-CW-2hq" firstAttribute="top" secondItem="bN5-f1-2lK" secondAttribute="top" constant="5" id="JPx-Uu-gbH"/>
                             <constraint firstItem="zbE-CW-2hq" firstAttribute="centerX" secondItem="5VA-Xy-6fI" secondAttribute="centerX" id="dcO-Om-i2a"/>
                             <constraint firstItem="zbE-CW-2hq" firstAttribute="leading" secondItem="bN5-f1-2lK" secondAttribute="leading" constant="87" id="kaU-BH-SHt"/>
                         </constraints>
@@ -244,12 +275,13 @@
             </objects>
             <point key="canvasLocation" x="2016.9230769230769" y="-804.02843601895734"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Jiwei Tab Bar Controller-->
         <scene sceneID="cbD-8O-JCC">
             <objects>
-                <tabBarController storyboardIdentifier="HomePage" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ItB-6E-RYV" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomePage" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ItB-6E-RYV" customClass="JiweiTabBarController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uc5-e5-AVM">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -264,6 +296,49 @@
             </objects>
             <point key="canvasLocation" x="1087.6923076923076" y="96.682464454976298"/>
         </scene>
+        <!--My Profile-->
+        <scene sceneID="6F1-hi-Bnu">
+            <objects>
+                <viewController storyboardIdentifier="MyProfile" title="My Profile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oAt-3F-UOV" customClass="MyProfileViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wb7-iN-5wP">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="673"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v9P-kj-rq8">
+                                <rect key="frame" x="7" y="83" width="344" height="506"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kaF-Rb-Hx9"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="Test" destination="v9P-kj-rq8" id="H4C-aq-zEu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zag-il-yGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4260" y="-327.36966824644549"/>
+        </scene>
+        <!--My Task-->
+        <scene sceneID="p2f-t6-WIE">
+            <objects>
+                <viewController title="My Task" id="jHv-1s-Qy0" sceneMemberID="viewController">
+                    <view key="view" alpha="0.0" contentMode="scaleToFill" id="7F5-g5-v5M">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="673"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TOo-YH-itr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0bg-bA-alz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4206" y="431"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Logo" width="1080" height="1080"/>
@@ -271,8 +346,14 @@
         <image name="laptopcomputer.and.iphone" catalog="system" width="128" height="74"/>
         <image name="person.2.square.stack" catalog="system" width="113" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

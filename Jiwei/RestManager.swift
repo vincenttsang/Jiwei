@@ -141,7 +141,7 @@ extension RestManager {
                     headers.add(value: "\(value)", forKey: "\(key)")
                 }
             }
-            cookies = headers.value(forKey: "Set-Cookie")
+            
         }
         
     }

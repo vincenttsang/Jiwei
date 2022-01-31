@@ -28,6 +28,7 @@
 		BFE8E8D82794255B00AE4781 /* JiweiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8D72794255B00AE4781 /* JiweiTests.swift */; };
 		BFE8E8E22794255B00AE4781 /* JiweiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8E12794255B00AE4781 /* JiweiUITests.swift */; };
 		BFE8E8E42794255B00AE4781 /* JiweiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8E32794255B00AE4781 /* JiweiUITestsLaunchTests.swift */; };
+		BFEC78FE27A7D46F00CDAEE8 /* MyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEC78FD27A7D46F00CDAEE8 /* MyTaskViewController.swift */; };
 		CF7998170D59E8D671CB71E5 /* libPods-Jiwei.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F92312FF4BFE0D4650A86019 /* libPods-Jiwei.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		BFE8E8E32794255B00AE4781 /* JiweiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BFE8E8F62794707700AE4781 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		BFE8E8F72794707700AE4781 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BFEC78FD27A7D46F00CDAEE8 /* MyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTaskViewController.swift; sourceTree = "<group>"; };
 		DD4BCD69CF2F8962B8D73BCA /* Pods-Jiwei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jiwei.debug.xcconfig"; path = "Target Support Files/Pods-Jiwei/Pods-Jiwei.debug.xcconfig"; sourceTree = "<group>"; };
 		F92312FF4BFE0D4650A86019 /* libPods-Jiwei.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jiwei.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC13255383AC0308536BC904 /* libPods-Jiwei-JiweiUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jiwei-JiweiUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 				BF5BBC902795BDF8009C76EA /* TaskCenterViewController.swift */,
 				BF5BBC922795BE36009C76EA /* AdminManagementViewController.swift */,
 				BF64499C2796786A007297A9 /* MyProfileViewController.swift */,
+				BFEC78FD27A7D46F00CDAEE8 /* MyTaskViewController.swift */,
 				BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */,
 				BF12BB8227A7831A00584668 /* JiweiAPI.swift */,
 				BFA3C3A527A78A4E0038594D /* RequestStructures.swift */,
@@ -410,6 +413,7 @@
 				BF5BBC912795BDF8009C76EA /* TaskCenterViewController.swift in Sources */,
 				BFE8E8C22794255A00AE4781 /* LoginViewController.swift in Sources */,
 				BF5BBC8F2795BD96009C76EA /* LibraryViewController.swift in Sources */,
+				BFEC78FE27A7D46F00CDAEE8 /* MyTaskViewController.swift in Sources */,
 				BF64499D2796786A007297A9 /* MyProfileViewController.swift in Sources */,
 				BFE8E8BE2794255A00AE4781 /* AppDelegate.swift in Sources */,
 				BFA3C3A627A78A4E0038594D /* RequestStructures.swift in Sources */,

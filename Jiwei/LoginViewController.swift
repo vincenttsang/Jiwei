@@ -56,8 +56,9 @@ class LoginViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
         }
         
-        // JiweiAPI.login(account: username.text ?? "null", passwordMD5: password.text ?? "null", completion: LoginComplete)
-        JiweiAPI.login(account: "202025220426", passwordMD5: "000000", completion: LoginComplete)
+        JiweiAPI.login(account: username.text ?? "null", passwordMD5: password.text ?? "null", completion: LoginComplete)
+        
+        //JiweiAPI.login(account: "202025220426", passwordMD5: "000000", completion: LoginComplete)
     }
     
 

@@ -51,3 +51,28 @@ struct MyInfoResponse: Codable, CustomStringConvertible {
         """
     }
 }
+
+struct MyTaskListResponse: Codable {
+    var code: Int32?
+    var count: Int32?
+    var msg: String?
+    var data: Array<Task?>?
+}
+
+struct Task: Codable {
+    var id: String?
+    var name: String?
+    var sex: String?
+    var telephone: String?
+    var address: String?
+    var description: String?
+    var computerType: String?
+    var status: String?
+    var repairMethod: String?
+    var startDate: String?
+    var endDate: String?
+    var idList: Array<String?>?
+    var nameList: Array<String?>?
+    var taskLog: [[String:String]]?
+    var pictureUrl: Array<String?>?
+}

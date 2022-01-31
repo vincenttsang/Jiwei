@@ -10,7 +10,7 @@ import Foundation
 var defString = String(stringLiteral: "")
 var defInt = -1
 
-struct Login: Codable, CustomStringConvertible {
+struct LoginResponse: Codable, CustomStringConvertible {
     var statusCode: String?
     var message: String?
     var name: String?
@@ -26,7 +26,7 @@ struct Login: Codable, CustomStringConvertible {
     }
 }
 
-struct MyInfo: Codable, CustomStringConvertible {
+struct MyInfoResponse: Codable, CustomStringConvertible {
     var account: String?
     var name: String?
     var major: String?

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: UIViewController {
 
@@ -18,25 +19,45 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     @IBAction func loginAction(sender: UIButton) {
-        goToTabBarController()
-        var msg:String = ""
-        let tryLogin = LoginAPI()
-        let LoginResult = tryLogin.TryLogin(username: "114514", password: "000000")
-        if LoginResult.statusCode == "200" {
-            title = "登录成功"
-            msg = "用户名: \(LoginResult.name!)\n角色: \(LoginResult.role!)\nCookie:\(GlobalCookie)"
-        } else {
-            title = "登录失败"
-            msg = "\(LoginResult.description)"
+        var msg: String = ""
+        var title: String = ""
+        
+        let LoginComplete = {(result: LoginResponse?) -> Void in
+            
+            if(result == nil) {
+                title = "登录失败"
+                msg = "无法连接至服务器"
+                
+                let alertController = UIAlertController(title: title, message: msg , preferredStyle: UIAlertController.Style.alert)
+                
+                alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                
+                self.present(alertController, animated: true, completion: nil)
+                
+                return
+            }
+            
+            if result!.statusCode == "200" {
+                title = "登录成功"
+                msg = "用户名: \(result!.name ?? "null")\n角色: \(result!.role ?? "null")"
+            } else {
+                title = "登录失败"
+                msg = "用户名: \(result!.name ?? "null")\n状态码: \(result!.statusCode ?? "null")"
+            }
+            
+            let alertController = UIAlertController(title: title, message: msg , preferredStyle: UIAlertController.Style.alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+                if result!.statusCode == "200" {
+                    self.goToTabBarController()
+                }
+            }))
+            
+            self.present(alertController, animated: true, completion: nil)
         }
         
-        let alertController = UIAlertController(title: title, message: msg , preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
-            if LoginResult.statusCode == "200" {
-                self.goToTabBarController()
-            }
-        }))
-        self.present(alertController, animated: true, completion: nil)
+        // JiweiAPI.login(account: username.text ?? "null", passwordMD5: password.text ?? "null", completion: LoginComplete)
+        JiweiAPI.login(account: "202025220426", passwordMD5: "000000", completion: LoginComplete)
     }
     
 

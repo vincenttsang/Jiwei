@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "945D949644797767F20410F13BB77961"
-               BuildableName = "libPods-Jiwei-JiweiUITests.a"
-               BlueprintName = "Pods-Jiwei-JiweiUITests"
+               BlueprintIdentifier = "615C831BCE925ED486B225B87E44926D"
+               BuildableName = "libKeychainAccess.a"
+               BlueprintName = "KeychainAccess"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -6,6 +6,7 @@ target 'Jiwei' do
   # Note it's NOT 'SideMenu'
   # Pods for Jiwei
   pod 'Alamofire', '~> 5.5'
+  pod 'KeychainAccess'
   target 'JiweiTests' do
     inherit! :search_paths
     # Pods for testing

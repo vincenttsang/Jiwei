@@ -22,7 +22,11 @@ class JiweiAPI {
         AF.request(api_url + "/member/login", method: .post, parameters: login_params, encoder: JSONParameterEncoder.default).response { response in
             if(response.data != nil) {
                 let ResultObject = try? decoder.decode(LoginResponse.self, from: response.data!)
-                completion(ResultObject!)
+                if(ResultObject != nil) {
+                    completion(ResultObject!)
+                } else {
+                    completion(nil)
+                }
             }
             completion(nil)
         }

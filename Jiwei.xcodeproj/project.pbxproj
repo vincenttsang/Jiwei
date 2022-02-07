@@ -57,6 +57,8 @@
 		A0AE81546087FD768E6F3FD4 /* Pods-Jiwei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jiwei.release.xcconfig"; path = "Target Support Files/Pods-Jiwei/Pods-Jiwei.release.xcconfig"; sourceTree = "<group>"; };
 		BD42909CF6825C5F8A74B826 /* Pods-Jiwei-JiweiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jiwei-JiweiUITests.release.xcconfig"; path = "Target Support Files/Pods-Jiwei-JiweiUITests/Pods-Jiwei-JiweiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF12BB8227A7831A00584668 /* JiweiAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiAPI.swift; sourceTree = "<group>"; };
+		BF3AD07927B0F9DA0021B82C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		BF3AD07A27B0F9DB0021B82C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		BF5BBC8D279589A0009C76EA /* Jiwei.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Jiwei.entitlements; sourceTree = "<group>"; };
 		BF5BBC8E2795BD96009C76EA /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		BF5BBC902795BDF8009C76EA /* TaskCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCenterViewController.swift; sourceTree = "<group>"; };
@@ -70,10 +72,8 @@
 		BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFE8E8BF2794255A00AE4781 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BFE8E8C12794255A00AE4781 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		BFE8E8C42794255A00AE4781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFE8E8C72794255A00AE4781 /* Jiwei.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jiwei.xcdatamodel; sourceTree = "<group>"; };
 		BFE8E8C92794255B00AE4781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BFE8E8CC2794255B00AE4781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFE8E8CE2794255B00AE4781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFE8E8D32794255B00AE4781 /* JiweiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JiweiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFE8E8D72794255B00AE4781 /* JiweiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiTests.swift; sourceTree = "<group>"; };
@@ -292,7 +292,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				"zh-Hans",
 			);
 			mainGroup = BFE8E8B12794255A00AE4781;
@@ -461,8 +460,8 @@
 		BFE8E8C32794255A00AE4781 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFE8E8C42794255A00AE4781 /* Base */,
 				BFE8E8F62794707700AE4781 /* zh-Hans */,
+				BF3AD07927B0F9DA0021B82C /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -470,8 +469,8 @@
 		BFE8E8CB2794255B00AE4781 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFE8E8CC2794255B00AE4781 /* Base */,
 				BFE8E8F72794707700AE4781 /* zh-Hans */,
+				BF3AD07A27B0F9DB0021B82C /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -538,6 +537,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -593,6 +593,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -612,9 +613,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -644,9 +645,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

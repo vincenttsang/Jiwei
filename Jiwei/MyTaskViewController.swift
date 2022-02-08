@@ -7,24 +7,54 @@
 
 import UIKit
 
-class MyTaskViewController: UIViewController {
+class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var data: [String] = []
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.data.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = self.data[indexPath.row]
+        return cell
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getMyTaskList()
+        self.myTaskTableView.dataSource = self
+        self.myTaskTableView.delegate = self
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var test: UITextView!
+    
+    @IBOutlet weak var myTaskTableView: UITableView!
     
     func getMyTaskList() {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         JiweiAPI.renew(completion: { () -> () in
             let complete = {(result: MyTaskListResponse?) -> (Void) in
-                let data = try! encoder.encode(result)
-                self.test.text = String(data: data, encoding: .utf8)!
-                print(self.test.text!)
+                self.myTaskTableView.reloadData()
+                if(result == nil) {
+                    return
+                } else if(result!.data == nil) {
+                    return
+                }
+                for i in (result!.data!) {
+                    if((i?.name) != nil) {
+                        self.myTaskTableView.reloadData()
+                        let task = "编号: " + ((i?.id)!) + "    称呼: " + ((i?.name)!) + "    状态: " + ((i?.status)!)
+                        self.data.append(task)
+                        self.myTaskTableView.performBatchUpdates({
+                            self.myTaskTableView.insertRows(at: [IndexPath(row: self.data.count - 1, section: 0)], with: .automatic)
+                        }, completion: nil)
+                    }
+                }
+            //self.test.text = String(data: data, encoding: .utf8)!
             }
             JiweiAPI.getMyTaskList(completion: complete)
         })

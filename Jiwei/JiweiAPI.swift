@@ -10,7 +10,7 @@ import Alamofire
 
 class JiweiAPI {
     
-    // private static let api_url = "https://www.scaujiwei.com"
+    //private static let api_url = "https://www.scaujiwei.com"
     
     private static let api_url = "http://127.0.0.1:8080"
     
@@ -66,6 +66,22 @@ class JiweiAPI {
         AF.request(api_url + "/member/getMyTaskList", method: .post, parameters: "", encoder: JSONParameterEncoder.default).response { response in
             if(response.data != nil) {
                 let ResultObject = try? decoder.decode(MyTaskListResponse.self, from: response.data!)
+                if(ResultObject != nil) {
+                    completion(ResultObject!)
+                }
+            }
+        }
+    }
+    
+    public static func getThingList(completion: @escaping (ItemList?) -> (Void)) {
+        let decoder = JSONDecoder()
+        let parameters: [String: Int32] = [
+            "page": 1,
+            "limit": 100
+        ]
+        AF.request(api_url + "/member/getThingList", method: .post, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).response { response in
+            if(response.data != nil) {
+                let ResultObject = try? decoder.decode(ItemList.self, from: response.data!)
                 if(ResultObject != nil) {
                     completion(ResultObject!)
                 }

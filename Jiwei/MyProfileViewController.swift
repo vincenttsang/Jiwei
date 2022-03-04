@@ -57,7 +57,6 @@ class MyProfileViewController: UIViewController {
                 self.emailLabel.text = result.email
                 self.phoneLabel.text = result.phone
                 self.wechatLabel.text = result.weChat
-                
             }
             JiweiAPI.getMyInfo(completion: complete)
         })

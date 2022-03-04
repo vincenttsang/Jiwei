@@ -76,3 +76,24 @@ struct Task: Codable {
     var taskLog: [[String:String]]?
     var pictureUrl: Array<String?>?
 }
+
+struct ItemList: Codable {
+    var code: Int32?
+    var count: Int32?
+    var data: Array<Borrow?>?
+    var msg: String?
+}
+
+struct Borrow: Codable {
+    var tid: String?
+    var bid: String?
+    var id: String
+    var status: String?
+    var currentAmount: Int32?
+    var totalAmount: Int32?
+    var startDate: String? //日期 格式 xxxx-xx-xx
+    var endDate: String? //日期 格式 xxxx-xx-xx
+    var memberName: String?
+    var memberAccount: String?
+    var name: String?
+}

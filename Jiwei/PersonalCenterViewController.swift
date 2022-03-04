@@ -21,14 +21,14 @@ class PersonalCenterViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             UIView.animate(withDuration: 0.5, animations: {
-                            self.containerViewA.alpha = 1
-                            self.containerViewB.alpha = 0
-                        })
+                self.containerViewA.alpha = 1
+                self.containerViewB.alpha = 0
+            })
         case 1:
             UIView.animate(withDuration: 0.5, animations: {
-                            self.containerViewA.alpha = 0
-                            self.containerViewB.alpha = 1
-                        })
+                self.containerViewA.alpha = 0
+                self.containerViewB.alpha = 1
+            })
         default:
             print("default")
         }

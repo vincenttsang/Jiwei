@@ -253,23 +253,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zbE-CW-2hq">
-                                <rect key="frame" x="87" y="49" width="216" height="32"/>
+                                <rect key="frame" x="87" y="49" width="216" height="33"/>
                                 <segments>
                                     <segment title="物资借用"/>
                                     <segment title="图书归还"/>
                                     <segment title="借用历史"/>
                                 </segments>
+                                <connections>
+                                    <action selector="showComponent:" destination="UnD-TX-bJ0" eventType="valueChanged" id="Dwl-z6-GMi"/>
+                                </connections>
                             </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Flz-1v-JtP">
+                                <rect key="frame" x="16" y="86" width="358" height="672"/>
+                                <connections>
+                                    <segue destination="9zZ-OZ-754" kind="embed" id="dqT-QJ-1Mo"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGf-wH-F2M">
+                                <rect key="frame" x="16" y="85" width="358" height="673"/>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zZ-Xr-nap">
+                                <rect key="frame" x="16" y="85" width="358" height="673"/>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bN5-f1-2lK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="leading" secondItem="3zZ-Xr-nap" secondAttribute="leading" id="06y-sr-vxD"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="bottom" secondItem="3zZ-Xr-nap" secondAttribute="bottom" id="0jA-VH-nol"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="top" secondItem="zbE-CW-2hq" secondAttribute="bottom" constant="5" id="2md-Pv-Pjs"/>
+                            <constraint firstItem="bN5-f1-2lK" firstAttribute="bottom" secondItem="Flz-1v-JtP" secondAttribute="bottom" constant="3" id="36u-K6-748"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="leading" secondItem="bN5-f1-2lK" secondAttribute="leading" constant="16" id="6FD-4u-S1b"/>
                             <constraint firstItem="zbE-CW-2hq" firstAttribute="top" secondItem="bN5-f1-2lK" secondAttribute="top" constant="5" id="JPx-Uu-gbH"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="leading" secondItem="UGf-wH-F2M" secondAttribute="leading" id="LPt-88-Sfr"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="top" secondItem="bN5-f1-2lK" secondAttribute="top" constant="42" id="N1a-bx-AcN"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="trailing" secondItem="3zZ-Xr-nap" secondAttribute="trailing" id="NF2-Dq-TNk"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="trailing" secondItem="UGf-wH-F2M" secondAttribute="trailing" id="aMG-J4-0Pl"/>
                             <constraint firstItem="zbE-CW-2hq" firstAttribute="centerX" secondItem="5VA-Xy-6fI" secondAttribute="centerX" id="dcO-Om-i2a"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="top" secondItem="UGf-wH-F2M" secondAttribute="top" constant="1" id="iJf-RF-qzn"/>
                             <constraint firstItem="zbE-CW-2hq" firstAttribute="leading" secondItem="bN5-f1-2lK" secondAttribute="leading" constant="87" id="kaU-BH-SHt"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="bottom" secondItem="UGf-wH-F2M" secondAttribute="bottom" id="pgE-SD-crg"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="top" secondItem="3zZ-Xr-nap" secondAttribute="top" constant="1" id="pn8-TR-xdL"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="centerX" secondItem="zbE-CW-2hq" secondAttribute="centerX" id="tV0-dS-OVt"/>
+                            <constraint firstItem="bN5-f1-2lK" firstAttribute="trailing" secondItem="Flz-1v-JtP" secondAttribute="trailing" constant="16" id="w1K-Rl-w8J"/>
+                            <constraint firstItem="Flz-1v-JtP" firstAttribute="centerY" secondItem="5VA-Xy-6fI" secondAttribute="centerY" id="y39-nC-LQr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="图书资源" image="books.vertical" catalog="system" id="dvw-Ef-cyq"/>
+                    <connections>
+                        <outlet property="containerViewA" destination="Flz-1v-JtP" id="qlR-82-lr4"/>
+                        <outlet property="containerViewB" destination="UGf-wH-F2M" id="Yp5-he-iV1"/>
+                        <outlet property="containerViewC" destination="3zZ-Xr-nap" id="Kxp-nt-N08"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fba-Ik-Sjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -484,6 +519,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0bg-bA-alz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4204.6153846153848" y="430.4502369668246"/>
+        </scene>
+        <!--Borrow Thing-->
+        <scene sceneID="WEp-mX-Kns">
+            <objects>
+                <viewController title="Borrow Thing" id="9zZ-OZ-754" customClass="BorrowThingViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eDa-Ea-Whb">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VNj-p0-ukI">
+                                <rect key="frame" x="0.0" y="44" width="358" height="628"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FzT-uo-a3g"/>
+                        <constraints>
+                            <constraint firstItem="FzT-uo-a3g" firstAttribute="top" secondItem="VNj-p0-ukI" secondAttribute="top" id="5JC-HE-u3u"/>
+                            <constraint firstItem="FzT-uo-a3g" firstAttribute="trailing" secondItem="VNj-p0-ukI" secondAttribute="trailing" id="Kd2-1A-TWv"/>
+                            <constraint firstItem="VNj-p0-ukI" firstAttribute="leading" secondItem="FzT-uo-a3g" secondAttribute="leading" id="cBT-mF-7KQ"/>
+                            <constraint firstItem="FzT-uo-a3g" firstAttribute="bottom" secondItem="VNj-p0-ukI" secondAttribute="bottom" id="gdh-H2-tvZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="borrowThingTableView" destination="VNj-p0-ukI" id="yt9-jG-ZEC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3kw-0Y-sW9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765" y="956"/>
         </scene>
     </scenes>
     <resources>

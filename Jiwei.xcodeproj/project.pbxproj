@@ -15,6 +15,7 @@
 		BF5BBC932795BE37009C76EA /* AdminManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5BBC922795BE36009C76EA /* AdminManagementViewController.swift */; };
 		BF64499D2796786A007297A9 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64499C2796786A007297A9 /* MyProfileViewController.swift */; };
 		BF6449A127968AD9007297A9 /* JiweiTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */; };
+		BFA1461427D1E357005F4C20 /* BorrowThingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1461327D1E357005F4C20 /* BorrowThingViewController.swift */; };
 		BFA3C3A627A78A4E0038594D /* RequestStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3C3A527A78A4E0038594D /* RequestStructures.swift */; };
 		BFE4CAC827950476001D7D06 /* PersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */; };
 		BFE4CAD0279544DA001D7D06 /* ResponseStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */; };
@@ -65,6 +66,7 @@
 		BF5BBC922795BE36009C76EA /* AdminManagementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminManagementViewController.swift; sourceTree = "<group>"; };
 		BF64499C2796786A007297A9 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiTabBarController.swift; sourceTree = "<group>"; };
+		BFA1461327D1E357005F4C20 /* BorrowThingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorrowThingViewController.swift; path = /Users/vincent/Documents/Xcode/Jiwei/Jiwei/BorrowThingViewController.swift; sourceTree = "<absolute>"; };
 		BFA3C3A527A78A4E0038594D /* RequestStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStructures.swift; sourceTree = "<group>"; };
 		BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCenterViewController.swift; sourceTree = "<group>"; };
 		BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStructures.swift; sourceTree = "<group>"; };
@@ -165,12 +167,12 @@
 			isa = PBXGroup;
 			children = (
 				BF5BBC8D279589A0009C76EA /* Jiwei.entitlements */,
+				BFA1461327D1E357005F4C20 /* BorrowThingViewController.swift */,
 				BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */,
 				BFE8E8BF2794255A00AE4781 /* SceneDelegate.swift */,
 				BFE8E8C12794255A00AE4781 /* LoginViewController.swift */,
 				BF5BBC8E2795BD96009C76EA /* LibraryViewController.swift */,
 				BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */,
-				BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */,
 				BFE8E8C32794255A00AE4781 /* Main.storyboard */,
 				BFE8E8C92794255B00AE4781 /* Assets.xcassets */,
 				BFE8E8CB2794255B00AE4781 /* LaunchScreen.storyboard */,
@@ -182,6 +184,7 @@
 				BFEC78FD27A7D46F00CDAEE8 /* MyTaskViewController.swift */,
 				BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */,
 				BF12BB8227A7831A00584668 /* JiweiAPI.swift */,
+				BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */,
 				BFA3C3A527A78A4E0038594D /* RequestStructures.swift */,
 			);
 			path = Jiwei;
@@ -408,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFE4CAC827950476001D7D06 /* PersonalCenterViewController.swift in Sources */,
+				BFA1461427D1E357005F4C20 /* BorrowThingViewController.swift in Sources */,
 				BF6449A127968AD9007297A9 /* JiweiTabBarController.swift in Sources */,
 				BF5BBC912795BDF8009C76EA /* TaskCenterViewController.swift in Sources */,
 				BFE8E8C22794255A00AE4781 /* LoginViewController.swift in Sources */,
@@ -610,6 +614,7 @@
 				DEVELOPMENT_TEAM = H65Q9JS5ZG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jiwei/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -620,7 +625,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "0.1 Alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.Jiwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -642,6 +647,7 @@
 				DEVELOPMENT_TEAM = H65Q9JS5ZG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jiwei/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -652,7 +658,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = "0.1 Alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.Jiwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;

@@ -16,6 +16,7 @@
 		BF64499D2796786A007297A9 /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64499C2796786A007297A9 /* MyProfileViewController.swift */; };
 		BF6449A127968AD9007297A9 /* JiweiTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */; };
 		BFA1461427D1E357005F4C20 /* BorrowThingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1461327D1E357005F4C20 /* BorrowThingViewController.swift */; };
+		BFA1461627D1F645005F4C20 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1461527D1F645005F4C20 /* DismissKeyboard.swift */; };
 		BFA3C3A627A78A4E0038594D /* RequestStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3C3A527A78A4E0038594D /* RequestStructures.swift */; };
 		BFE4CAC827950476001D7D06 /* PersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */; };
 		BFE4CAD0279544DA001D7D06 /* ResponseStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */; };
@@ -67,6 +68,7 @@
 		BF64499C2796786A007297A9 /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		BF6449A027968AD9007297A9 /* JiweiTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiweiTabBarController.swift; sourceTree = "<group>"; };
 		BFA1461327D1E357005F4C20 /* BorrowThingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorrowThingViewController.swift; path = /Users/vincent/Documents/Xcode/Jiwei/Jiwei/BorrowThingViewController.swift; sourceTree = "<absolute>"; };
+		BFA1461527D1F645005F4C20 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		BFA3C3A527A78A4E0038594D /* RequestStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStructures.swift; sourceTree = "<group>"; };
 		BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCenterViewController.swift; sourceTree = "<group>"; };
 		BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStructures.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				BF5BBC8D279589A0009C76EA /* Jiwei.entitlements */,
+				BFA1461527D1F645005F4C20 /* DismissKeyboard.swift */,
 				BFA1461327D1E357005F4C20 /* BorrowThingViewController.swift */,
 				BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */,
 				BFE8E8BF2794255A00AE4781 /* SceneDelegate.swift */,
@@ -423,6 +426,7 @@
 				BFE8E8C82794255A00AE4781 /* Jiwei.xcdatamodeld in Sources */,
 				BFE4CAD0279544DA001D7D06 /* ResponseStructures.swift in Sources */,
 				BF12BB8327A7831A00584668 /* JiweiAPI.swift in Sources */,
+				BFA1461627D1F645005F4C20 /* DismissKeyboard.swift in Sources */,
 				BFE8E8C02794255A00AE4781 /* SceneDelegate.swift in Sources */,
 				BF5BBC932795BE37009C76EA /* AdminManagementViewController.swift in Sources */,
 			);

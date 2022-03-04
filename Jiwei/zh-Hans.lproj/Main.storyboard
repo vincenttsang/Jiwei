@@ -500,16 +500,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Oqf-LG-MOe">
-                                <rect key="frame" x="0.0" y="44" width="358" height="629"/>
+                                <rect key="frame" x="0.0" y="44" width="358" height="590"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFQ-Po-ZQ4">
+                                <rect key="frame" x="88" y="642" width="182" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="统计我的任务数量" titleAlignment="center"/>
+                                <connections>
+                                    <action selector="confirmClick:" destination="oAt-3F-UOV" eventType="touchUpInside" id="LG7-KD-8ST"/>
+                                    <action selector="countMyTasks:" destination="jHv-1s-Qy0" eventType="touchUpInside" id="zda-Ir-6qF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TOo-YH-itr"/>
                         <constraints>
+                            <constraint firstItem="UFQ-Po-ZQ4" firstAttribute="bottom" secondItem="Oqf-LG-MOe" secondAttribute="bottom" constant="39" id="01Z-gB-4iz"/>
                             <constraint firstItem="TOo-YH-itr" firstAttribute="trailing" secondItem="Oqf-LG-MOe" secondAttribute="trailing" id="2PC-kl-1XU"/>
                             <constraint firstItem="Oqf-LG-MOe" firstAttribute="leading" secondItem="TOo-YH-itr" secondAttribute="leading" id="3P5-Ok-qbi"/>
+                            <constraint firstItem="TOo-YH-itr" firstAttribute="bottom" secondItem="Oqf-LG-MOe" secondAttribute="bottom" constant="39" id="4pa-yS-B1C"/>
                             <constraint firstItem="TOo-YH-itr" firstAttribute="top" secondItem="Oqf-LG-MOe" secondAttribute="top" id="Ip8-3w-2d9"/>
-                            <constraint firstItem="TOo-YH-itr" firstAttribute="bottom" secondItem="Oqf-LG-MOe" secondAttribute="bottom" id="OPV-7Y-LXy"/>
+                            <constraint firstItem="UFQ-Po-ZQ4" firstAttribute="centerX" secondItem="Oqf-LG-MOe" secondAttribute="centerX" id="Z8Q-oh-KXa"/>
+                            <constraint firstItem="UFQ-Po-ZQ4" firstAttribute="leading" secondItem="TOo-YH-itr" secondAttribute="leading" constant="88" id="bVg-RT-u50"/>
                         </constraints>
                     </view>
                     <connections>

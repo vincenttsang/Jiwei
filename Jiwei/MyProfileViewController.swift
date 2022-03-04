@@ -35,6 +35,7 @@ class MyProfileViewController: UIViewController {
         super.viewDidLoad()
         stackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -20).isActive = true
         getMyInfo()
+        self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     

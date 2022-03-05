@@ -10,9 +10,9 @@ import Alamofire
 
 class JiweiAPI {
     
-    //private static let api_url = "https://www.scaujiwei.com"
+    private static let api_url = "https://www.scaujiwei.com"
     
-    private static let api_url = "http://127.0.0.1:8080"
+    //private static let api_url = "http://127.0.0.1:8080"
     
     private static var login_params: LoginRequest? = nil
     

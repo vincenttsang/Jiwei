@@ -11,6 +11,8 @@ class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var data: [String] = []
     var finishedTasks:Int = 0
+    var cancelledTasks:Int = 0
+    var ongoingTasks:Int = 0
     var totalTasks:Int = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,10 +53,16 @@ class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     if((i?.name) != nil) {
                         self.myTaskTableView.reloadData()
                         let task = "编号: " + ((i?.id)!) + "    称呼: " + ((i?.name)!) + "    状态: " + ((i?.status)!)
+                        
                         self.totalTasks += 1
                         if((i?.status)! == "已完成") {
                             self.finishedTasks += 1
+                        } else if ((i?.status)! == "处理中") {
+                            self.ongoingTasks += 1
+                        } else if ((i?.status)! == "取消") {
+                            self.cancelledTasks += 1
                         }
+                        
                         self.data.append(task)
                         self.myTaskTableView.performBatchUpdates({
                             self.myTaskTableView.insertRows(at: [IndexPath(row: self.data.count - 1, section: 0)], with: .automatic)
@@ -70,9 +78,9 @@ class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func countMyTasks(_ sender: Any) {
         let title = "我的任务数"
         let completionRate = Double(finishedTasks)/Double(totalTasks)
-        let msg = "您总共接下了 " + String(totalTasks) + "个任务\n" + "其中已完成 " + String(finishedTasks) + " 个任务\n" + "已取消 " + String(totalTasks - finishedTasks) + " 个任务\n" + "任务完成率为" + String(format: " %.2f%%", completionRate * 100)
+        let msg = "您总共接下了 " + String(totalTasks) + "个任务\n" + "其中已完成 " + String(finishedTasks) + " 个任务\n" + "已取消 " + String(cancelledTasks) + " 个任务\n" + "有 " + String(ongoingTasks) + " 个任务进行中\n" + "任务完成率为" + String(format: " %.2f%%", completionRate * 100)
         let alertController = UIAlertController(title: title, message: msg , preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "好的", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
     

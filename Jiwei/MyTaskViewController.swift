@@ -77,7 +77,7 @@ class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBAction func countMyTasks(_ sender: Any) {
         let title = "我的任务数"
-        let completionRate = Double(finishedTasks)/Double(totalTasks)
+        let completionRate = Double(finishedTasks)/Double(totalTasks - ongoingTasks)
         let msg = "您总共接下了 " + String(totalTasks) + "个任务\n" + "其中已完成 " + String(finishedTasks) + " 个任务\n" + "已取消 " + String(cancelledTasks) + " 个任务\n" + "有 " + String(ongoingTasks) + " 个任务进行中\n" + "任务完成率为" + String(format: " %.2f%%", completionRate * 100)
         let alertController = UIAlertController(title: title, message: msg , preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "好的", style: UIAlertAction.Style.default, handler: nil))

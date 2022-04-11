@@ -59,6 +59,13 @@ struct MyTaskListResponse: Codable {
     var data: Array<Task?>?
 }
 
+struct AllTaskListResponse: Codable {
+    var code: Int32?
+    var totalcount: Int32?
+    var msg: String?
+    var data: Array<Task?>?
+}
+
 struct Task: Codable {
     var id: String?
     var name: String?

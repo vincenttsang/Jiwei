@@ -9,12 +9,13 @@ import UIKit
 import Alamofire
 
 class LoginViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
+    
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!

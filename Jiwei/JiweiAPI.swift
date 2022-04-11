@@ -73,6 +73,54 @@ class JiweiAPI {
         }
     }
     
+    public static func getAllTaskList(completion: @escaping (AllTaskListResponse?) -> (Void)) {
+        let decoder = JSONDecoder()
+        let parameters: [String: Int32] = [
+            "page": 1,
+            "limit": INT32_MAX
+        ]
+        AF.request(api_url + "/member/getTaskByParam", method: .post, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).response { response in
+            if(response.data != nil) {
+                let ResultObject = try? decoder.decode(AllTaskListResponse.self, from: response.data!)
+                if(ResultObject != nil) {
+                    completion(ResultObject!)
+                }
+            }
+        }
+    }
+    
+    public static func getAllTaskList(pageNum: Int32, limit: Int32, completion: @escaping (AllTaskListResponse?) -> (Void)) {
+        let decoder = JSONDecoder()
+        let parameters: [String: Int32] = [
+            "page": pageNum,
+            "limit": limit
+        ]
+        AF.request(api_url + "/member/getTaskByParam", method: .post, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).response { response in
+            if(response.data != nil) {
+                let ResultObject = try? decoder.decode(AllTaskListResponse.self, from: response.data!)
+                if(ResultObject != nil) {
+                    completion(ResultObject!)
+                }
+            }
+        }
+    }
+    
+    public static func getAllTaskList(pageNum: Int32, completion: @escaping (AllTaskListResponse?) -> (Void)) {
+        let decoder = JSONDecoder()
+        let parameters: [String: Int32] = [
+            "page": pageNum,
+            "limit": 50
+        ]
+        AF.request(api_url + "/member/getTaskByParam", method: .post, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).response { response in
+            if(response.data != nil) {
+                let ResultObject = try? decoder.decode(AllTaskListResponse.self, from: response.data!)
+                if(ResultObject != nil) {
+                    completion(ResultObject!)
+                }
+            }
+        }
+    }
+    
     public static func getThingList(completion: @escaping (ItemList?) -> (Void)) {
         let decoder = JSONDecoder()
         let parameters: [String: Int32] = [

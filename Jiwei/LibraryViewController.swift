@@ -35,7 +35,7 @@ class LibraryViewController: UIViewController {
                 self.containerViewB.alpha = 1
                 self.containerViewC.alpha = 0
             })
-        case 3:
+        case 2:
             UIView.animate(withDuration: 0.5, animations: {
                 self.containerViewA.alpha = 0
                 self.containerViewB.alpha = 0

@@ -20,9 +20,9 @@ class JiweiAPI {
         login_params = LoginRequest(account: account, passwordMD5: passwordMD5)
         let decoder = JSONDecoder()
         AF.request(api_url + "/member/login", method: .post, parameters: login_params, encoder: JSONParameterEncoder.default).response { response in
-            if(response.data != nil) {
+            if response.data != nil {
                 let ResultObject = try? decoder.decode(LoginResponse.self, from: response.data!)
-                if(ResultObject != nil) {
+                if ResultObject != nil {
                     completion(ResultObject!)
                 } else {
                     completion(nil)
@@ -34,9 +34,9 @@ class JiweiAPI {
     
     public static func renew(completion: @escaping () -> ()) {
         print("Renewing the session...")
-        if(login_params != nil) {
+        if login_params != nil {
             AF.request(api_url + "/member/login", method: .post, parameters: login_params, encoder: JSONParameterEncoder.default).response { response in
-                if(response.data != nil) {
+                if response.data != nil {
                     print("Success!")
                     print(response.data!)
                     completion()
@@ -52,9 +52,9 @@ class JiweiAPI {
     public static func getMyInfo(completion: @escaping (MyInfoResponse) -> (Void)) {
         let decoder = JSONDecoder()
         AF.request(api_url + "/member/getMyInfo", method: .post, parameters: "", encoder: JSONParameterEncoder.default).response { response in
-            if(response.data != nil) {
+            if response.data != nil {
                 let ResultObject = try? decoder.decode(MyInfoResponse.self, from: response.data!)
-                if(ResultObject != nil) {
+                if ResultObject != nil {
                     completion(ResultObject!)
                 }
             }
@@ -64,57 +64,87 @@ class JiweiAPI {
     public static func getMyTaskList(completion: @escaping (MyTaskListResponse?) -> (Void)) {
         let decoder = JSONDecoder()
         AF.request(api_url + "/member/getMyTaskList", method: .post, parameters: "", encoder: JSONParameterEncoder.default).response { response in
-            if(response.data != nil) {
+            if response.data != nil {
                 let ResultObject = try? decoder.decode(MyTaskListResponse.self, from: response.data!)
-                if(ResultObject != nil) {
+                if ResultObject != nil {
                     completion(ResultObject!)
                 }
             }
         }
     }
     
-    public static func getAllTaskList(completion: @escaping (AllTaskListResponse?) -> (Void)) {
+    public static func getAllTaskList(completion: @escaping (UniversalTaskListResponse?) -> (Void)) {
         let decoder = JSONDecoder()
         let parameters: [String: Int32] = [
             "page": 1,
             "limit": INT32_MAX
         ]
         AF.request(api_url + "/member/getTaskByParam", method: .post, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).response { response in
-            if(response.data != nil) {
-                let ResultObject = try? decoder.decode(AllTaskListResponse.self, from: response.data!)
-                if(ResultObject != nil) {
+            if response.data != nil {
+                let ResultObject = try? decoder.decode(UniversalTaskListResponse.self, from: response.data!)
+                if ResultObject != nil {
                     completion(ResultObject!)
                 }
             }
         }
     }
     
-    public static func getAllTaskList(pageNum: Int32, limit: Int32, completion: @escaping (AllTaskListResponse?) -> (Void)) {
+    public static func getAllTaskList(pageNum: Int32, limit: Int32, completion: @escaping (UniversalTaskListResponse?) -> (Void)) {
         let decoder = JSONDecoder()
         let parameters: [String: Int32] = [
             "page": pageNum,
             "limit": limit
         ]
         AF.request(api_url + "/member/getTaskByParam", method: .post, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).response { response in
-            if(response.data != nil) {
-                let ResultObject = try? decoder.decode(AllTaskListResponse.self, from: response.data!)
-                if(ResultObject != nil) {
+            if response.data != nil {
+                let ResultObject = try? decoder.decode(UniversalTaskListResponse.self, from: response.data!)
+                if ResultObject != nil {
                     completion(ResultObject!)
                 }
             }
         }
     }
     
-    public static func getAllTaskList(pageNum: Int32, completion: @escaping (AllTaskListResponse?) -> (Void)) {
+    public static func getAllTaskList(pageNum: Int32, completion: @escaping (UniversalTaskListResponse?) -> (Void)) {
         let decoder = JSONDecoder()
         let parameters: [String: Int32] = [
             "page": pageNum,
-            "limit": 50
+            "limit": 20
         ]
         AF.request(api_url + "/member/getTaskByParam", method: .post, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).response { response in
-            if(response.data != nil) {
-                let ResultObject = try? decoder.decode(AllTaskListResponse.self, from: response.data!)
-                if(ResultObject != nil) {
+            if response.data != nil {
+                let ResultObject = try? decoder.decode(UniversalTaskListResponse.self, from: response.data!)
+                if ResultObject != nil {
+                    completion(ResultObject!)
+                }
+            }
+        }
+    }
+    
+    /*
+     getTaskListByParam(pageNum: Int32, limit: Int32, status: String = "", method: String = "", startdate: String = "", enddate: String = "", completion: @escaping (UniversalTaskListResponse?) -> (Void))
+     status: 选传 任务状态可选传“未处理 处理中 已完成 取消” 不传默认返回全部
+     method: 选传 线上or线下 不传默认返回全部
+     startdate: 选传 任务开始时间 格式"YYYY-MM-DD"
+     enddate: 选传 任务结束时间 格式"YYYY-MM-DD"
+     */
+    public static func getTaskListByParam(pageNum: Int32, limit: Int32, status: String = "", method: String = "", startdate: String = "", enddate: String = "", completion: @escaping (UniversalTaskListResponse?) -> (Void)) {
+        
+        struct RequestParameters : Codable {
+            let page: Int32
+            let limit: Int32
+            let status: String
+            let method: String
+            let startdate: String
+            let enddate: String
+        }
+        
+        let decoder = JSONDecoder()
+        let parameters = RequestParameters(page: pageNum, limit: limit, status: status, method: method, startdate: startdate, enddate: enddate)
+        AF.request(api_url + "/member/getTaskByParam", method: .post, parameters: parameters, encoder: URLEncodedFormParameterEncoder.default).response { response in
+            if response.data != nil {
+                let ResultObject = try? decoder.decode(UniversalTaskListResponse.self, from: response.data!)
+                if ResultObject != nil {
                     completion(ResultObject!)
                 }
             }

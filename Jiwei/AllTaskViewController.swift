@@ -53,7 +53,7 @@ class AllTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         JiweiAPI.renew(completion: { () -> () in
-            let complete = {(result: AllTaskListResponse?) -> (Void) in
+            let complete = {(result: UniversalTaskListResponse?) -> (Void) in
                 self.allTaskTableView.reloadData()
                 if(result == nil) {
                     return
@@ -63,7 +63,7 @@ class AllTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
                 for i in (result!.data!) {
                     if((i?.name) != nil) {
                         self.allTaskTableView.reloadData()
-                        let task = "编号: " + ((i?.id)!) + "    称呼: " + ((i?.name)!) + "    状态: " + ((i?.status)!)
+                        let task = "编号: " + ((i?.id)!) + "    " + ((i?.name)!) + "    状态: " + ((i?.status)!)
                         
                         self.totalTasks += 1
                         if((i?.status)! == "已完成") {
@@ -75,12 +75,12 @@ class AllTaskViewController: UIViewController, UITableViewDelegate, UITableViewD
                         }
                         
                         self.data.append(task)
-                        self.allTaskTableView.performBatchUpdates({
-                            self.allTaskTableView.insertRows(at: [IndexPath(row: self.data.count - 1, section: 0)], with: .automatic)
-                        }, completion: nil)
                     }
                 }
             //self.test.text = String(data: data, encoding: .utf8)!
+                self.allTaskTableView.performBatchUpdates({
+                   self.allTaskTableView.insertRows(at: [IndexPath(row: self.data.count - 1, section: 0)], with: .automatic)
+               }, completion: nil)
             }
             JiweiAPI.getAllTaskList(completion: complete)
         })

@@ -59,7 +59,7 @@ struct MyTaskListResponse: Codable {
     var data: Array<Task?>?
 }
 
-struct AllTaskListResponse: Codable {
+struct UniversalTaskListResponse: Codable {
     var code: Int32?
     var totalcount: Int32?
     var msg: String?

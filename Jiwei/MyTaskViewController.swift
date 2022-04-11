@@ -64,11 +64,11 @@ class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDa
                         }
                         
                         self.data.append(task)
-                        self.myTaskTableView.performBatchUpdates({
-                            self.myTaskTableView.insertRows(at: [IndexPath(row: self.data.count - 1, section: 0)], with: .automatic)
-                        }, completion: nil)
                     }
                 }
+                self.myTaskTableView.performBatchUpdates({
+                    self.myTaskTableView.insertRows(at: [IndexPath(row: self.data.count - 1, section: 0)], with: .automatic)
+                }, completion: nil)
             //self.test.text = String(data: data, encoding: .utf8)!
             }
             JiweiAPI.getMyTaskList(completion: complete)

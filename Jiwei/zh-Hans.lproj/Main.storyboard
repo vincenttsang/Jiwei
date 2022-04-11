@@ -199,6 +199,9 @@
                                     <segment title="线上任务"/>
                                     <segment title="线下任务"/>
                                 </segments>
+                                <connections>
+                                    <action selector="showComponent:" destination="Zm0-Lw-s8J" eventType="valueChanged" id="Dlm-Zc-M7L"/>
+                                </connections>
                             </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAs-3L-8TM">
                                 <rect key="frame" x="16" y="88" width="358" height="673"/>
@@ -206,24 +209,49 @@
                                     <segue destination="g9n-Ej-Qhg" kind="embed" id="vag-5T-aEL"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJn-aK-667">
+                                <rect key="frame" x="16" y="88" width="358" height="673"/>
+                                <connections>
+                                    <segue destination="Nya-J6-PbS" kind="embed" id="7zH-bT-Wv3"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aX-NY-IhV">
+                                <rect key="frame" x="16" y="88" width="358" height="673"/>
+                                <connections>
+                                    <segue destination="Qe9-TS-2Qq" kind="embed" id="AdH-41-3No"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4GW-vj-f0Y"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="2aX-NY-IhV" firstAttribute="leading" secondItem="4GW-vj-f0Y" secondAttribute="leading" constant="16" id="28E-Sw-U1J"/>
                             <constraint firstItem="wAs-3L-8TM" firstAttribute="leading" secondItem="4GW-vj-f0Y" secondAttribute="leading" constant="16" id="Fjx-fB-7IS"/>
+                            <constraint firstItem="mJn-aK-667" firstAttribute="top" secondItem="4GW-vj-f0Y" secondAttribute="top" constant="44" id="Msy-ji-vpD"/>
+                            <constraint firstItem="mJn-aK-667" firstAttribute="leading" secondItem="4GW-vj-f0Y" secondAttribute="leading" constant="16" id="Nad-VH-238"/>
+                            <constraint firstItem="4GW-vj-f0Y" firstAttribute="trailing" secondItem="2aX-NY-IhV" secondAttribute="trailing" constant="16" id="Pfs-mF-sgz"/>
+                            <constraint firstItem="2aX-NY-IhV" firstAttribute="top" secondItem="4GW-vj-f0Y" secondAttribute="top" constant="44" id="RjB-rS-icR"/>
                             <constraint firstItem="wAs-3L-8TM" firstAttribute="top" secondItem="4GW-vj-f0Y" secondAttribute="top" constant="44" id="X5p-H3-amb"/>
                             <constraint firstItem="K3B-lh-1Z9" firstAttribute="top" secondItem="4GW-vj-f0Y" secondAttribute="top" constant="5" id="Z1A-LX-C9I"/>
+                            <constraint firstItem="4GW-vj-f0Y" firstAttribute="trailing" secondItem="mJn-aK-667" secondAttribute="trailing" constant="16" id="fdK-HK-bMG"/>
                             <constraint firstItem="K3B-lh-1Z9" firstAttribute="leading" secondItem="4GW-vj-f0Y" secondAttribute="leading" constant="87" id="o8t-dm-Fns"/>
+                            <constraint firstItem="4GW-vj-f0Y" firstAttribute="bottom" secondItem="2aX-NY-IhV" secondAttribute="bottom" id="quF-YT-s2m"/>
                             <constraint firstItem="4GW-vj-f0Y" firstAttribute="bottom" secondItem="wAs-3L-8TM" secondAttribute="bottom" id="uV6-Du-IVJ"/>
+                            <constraint firstItem="4GW-vj-f0Y" firstAttribute="bottom" secondItem="mJn-aK-667" secondAttribute="bottom" id="x9v-VE-Baq"/>
                             <constraint firstItem="4GW-vj-f0Y" firstAttribute="trailing" secondItem="wAs-3L-8TM" secondAttribute="trailing" constant="16" id="zeE-cS-8Lj"/>
                             <constraint firstItem="K3B-lh-1Z9" firstAttribute="centerX" secondItem="pKT-kO-57W" secondAttribute="centerX" id="zrJ-Co-IpG"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="任务中心" image="laptopcomputer.and.iphone" catalog="system" id="7PG-TB-ynw"/>
+                    <connections>
+                        <outlet property="containerViewA" destination="wAs-3L-8TM" id="Sel-g6-Cut"/>
+                        <outlet property="containerViewB" destination="mJn-aK-667" id="CEG-9l-WvB"/>
+                        <outlet property="containerViewC" destination="2aX-NY-IhV" id="DCz-eC-U2t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqd-gN-dGD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3065" y="-804"/>
+            <point key="canvasLocation" x="3063.0769230769229" y="-804.02843601895734"/>
         </scene>
         <!--成员管理-->
         <scene sceneID="U3E-Lh-Hzv">
@@ -616,6 +644,63 @@
             </objects>
             <point key="canvasLocation" x="4180" y="-1266.4691943127962"/>
         </scene>
+        <!--Online Task View Controller-->
+        <scene sceneID="IOi-tA-dAH">
+            <objects>
+                <viewController id="Nya-J6-PbS" customClass="OnlineTaskViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uLm-Du-JUN">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="673"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="thk-yC-R0Q">
+                                <rect key="frame" x="0.0" y="0.0" width="358" height="613"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yp-ju-atP">
+                                <rect key="frame" x="95.666666666666686" y="642" width="167" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="统计未处理的线上任务"/>
+                                <connections>
+                                    <action selector="calNotFinishedTasks:" destination="Nya-J6-PbS" eventType="touchUpInside" id="TRz-1z-HsA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Yp-ju-atP" firstAttribute="top" secondItem="thk-yC-R0Q" secondAttribute="bottom" constant="29" id="33G-0g-6Gp"/>
+                            <constraint firstItem="3Yp-ju-atP" firstAttribute="centerX" secondItem="uLm-Du-JUN" secondAttribute="centerX" id="PDt-aE-yVk"/>
+                            <constraint firstItem="3Yp-ju-atP" firstAttribute="bottom" secondItem="uLm-Du-JUN" secondAttribute="bottomMargin" id="PuH-lo-UOy"/>
+                            <constraint firstItem="thk-yC-R0Q" firstAttribute="leading" secondItem="uLm-Du-JUN" secondAttribute="leadingMargin" constant="-16" id="Vgf-dO-9BV"/>
+                            <constraint firstItem="3Yp-ju-atP" firstAttribute="centerX" secondItem="thk-yC-R0Q" secondAttribute="centerX" id="nZC-96-sEn"/>
+                            <constraint firstItem="thk-yC-R0Q" firstAttribute="top" secondItem="uLm-Du-JUN" secondAttribute="topMargin" constant="-44" id="v21-aO-mbf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="MyTextView" destination="thk-yC-R0Q" id="h61-Pe-eU6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1uL-xE-XV4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3770.7692307692305" y="-1588.5071090047393"/>
+        </scene>
+        <!--Offline Task View Controller-->
+        <scene sceneID="T4Y-ra-65s">
+            <objects>
+                <viewController id="Qe9-TS-2Qq" customClass="OfflineTaskViewController" customModule="Jiwei" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfu-IO-5iv">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="673"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="laj-T5-53z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4031" y="-463"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Logo" width="1080" height="1080"/>
@@ -623,6 +708,9 @@
         <image name="laptopcomputer.and.iphone" catalog="system" width="128" height="74"/>
         <image name="person.2.crop.square.stack" catalog="system" width="113" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

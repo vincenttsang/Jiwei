@@ -49,7 +49,7 @@ class LoginViewController: UIViewController {
             
             let alertController = UIAlertController(title: title, message: msg , preferredStyle: UIAlertController.Style.alert)
             
-            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+            alertController.addAction(UIAlertAction(title: "好的", style: UIAlertAction.Style.default, handler: { action in
                 if result!.statusCode == "200" {
                     self.goToTabBarController()
                 }

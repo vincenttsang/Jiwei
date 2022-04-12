@@ -11,11 +11,31 @@ class OfflineTaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getOfflineTaskList()
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
     
-
+    func getOfflineTaskList() {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = .prettyPrinted
+        JiweiAPI.renew(completion: { () -> () in
+            let complete = {(result: UniversalTaskListResponse?) -> (Void) in
+                if(result == nil) {
+                    return
+                } else if(result!.data == nil) {
+                    return
+                }
+                for i in (result!.data!) {
+                    print(i?.name ?? "null")
+                    print(i?.description ?? "null")
+                }
+            }
+            JiweiAPI.getTaskListByParam(pageNum: 1, limit: INT32_MAX, method: "线下", completion: complete)
+        })
+    }
+    
+    
     /*
     // MARK: - Navigation
 

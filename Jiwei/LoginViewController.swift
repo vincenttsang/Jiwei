@@ -7,18 +7,79 @@
 
 import UIKit
 import Alamofire
+import KeychainAccess
 
 class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        getPassword()
         // Do any additional setup after loading the view.
     }
     
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var passwdSwitch: UISwitch!
+    
+    @IBAction func passwdSwitchChanged(_ sender: UISwitch) {
+        if passwdSwitch.isOn {
+            print("记住密码开关打开")
+            savePassword()
+        } else {
+            print("记住密码开关关闭")
+            let keys = Keychain(service: "org.vincenttsang.scaujiwei-client").allKeys()
+            for key in keys {
+                print("key: \(key)")
+                removePassword(key: key)
+            }
+        }
+    }
+    
+    private func getPassword() {
+        let keychain = Keychain(service: "org.vincenttsang.scaujiwei-client")
+        let keys = keychain.allKeys()
+        if keys.isEmpty {
+            print("Keychain中保存的密码为空")
+            print("记住密码开关关闭")
+            passwdSwitch.isOn = false
+            return
+        } else {
+            print("记住密码开关打开")
+            passwdSwitch.isOn = true
+            for key in keys {
+                username.text = key
+                do {
+                    try password.text = keychain.get(key)
+                }
+                catch let error {
+                    print(error)
+                }
+            }
+        }
+    }
+    
+    private func savePassword() {
+        let passwordMD5 = password.text!
+        let account = username.text!
+        let keychain = Keychain(service: "org.vincenttsang.scaujiwei-client")
+        do {
+            try keychain.set(passwordMD5, key: account)
+        }
+        catch let error {
+            print(error)
+        }
+    }
+    
+    private func removePassword(key: String) {
+        let keychain = Keychain(service: "org.vincenttsang.scaujiwei-client")
+        do {
+            try keychain.remove(key)
+        } catch let error {
+            print("error: \(error)")
+        }
+    }
     
     @IBAction func loginAction(sender: UIButton) {
         var msg: String = ""

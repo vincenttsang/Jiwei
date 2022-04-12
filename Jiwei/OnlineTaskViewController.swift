@@ -11,15 +11,18 @@ class OnlineTaskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.MyTextView.text="此处将显示未处理的线上任务"
+        self.MyTextView.text = self.textBuffer
         self.hideKeyboardWhenTappedAround()
         // Do any additional setup after loading the view.
     }
+    
+    var textBuffer:String = "此处将显示未处理的线上任务"
     
     @IBOutlet weak var MyTextView: UITextView!
     
     @IBAction func calNotFinishedTasks(_ sender: Any) {
         self.MyTextView.text = ""
+        self.MyTextView.textAlignment = NSTextAlignment.left
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         var num: UInt32 = 0
@@ -32,19 +35,20 @@ class OnlineTaskViewController: UIViewController {
                 }
                 for i in (result!.data!) {
                     num += 1
-                    self.MyTextView.text += "\n"
-                    self.MyTextView.text += "任务编号【\((i?.id) ?? "null")】\n"
-                    self.MyTextView.text += "姓名： \((i?.name) ?? "null")\n"
-                    self.MyTextView.text += "性别： \((i?.sex) ?? "null")\n"
-                    self.MyTextView.text += "电话号码： \((i?.telephone) ?? "null")\n"
-                    self.MyTextView.text += "地址： \((i?.address) ?? "null")\n"
-                    self.MyTextView.text += "电脑型号： \((i?.computerType) ?? "null")\n"
-                    self.MyTextView.text += "任务描述： \((i?.description) ?? "null")"
-                    self.MyTextView.text += "报修日期： \((i?.startDate) ?? "null")\n"
+                    self.textBuffer += "\n"
+                    self.textBuffer += "任务编号【\((i?.id) ?? "null")】\n"
+                    self.textBuffer += "姓名： \((i?.name) ?? "null")\n"
+                    self.textBuffer += "性别： \((i?.sex) ?? "null")\n"
+                    self.textBuffer += "电话号码： \((i?.telephone) ?? "null")\n"
+                    self.textBuffer += "地址： \((i?.address) ?? "null")\n"
+                    self.textBuffer += "电脑型号： \((i?.computerType) ?? "null")\n"
+                    self.textBuffer += "任务描述： \((i?.description) ?? "null")"
+                    self.textBuffer += "报修日期： \((i?.startDate) ?? "null")\n"
                 }
                 let alertController = UIAlertController(title: "统计完成", message: "总共有\(num)个任务未处理" , preferredStyle: UIAlertController.Style.alert)
                 alertController.addAction(UIAlertAction(title: "好的", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
+                self.MyTextView.text = self.textBuffer
             }
             JiweiAPI.getTaskListByParam(pageNum: 1, limit: INT32_MAX, status: "未处理", method: "线上", completion: complete)
         })

@@ -21,7 +21,7 @@ class OnlineTaskViewController: UIViewController {
     @IBOutlet weak var MyTextView: UITextView!
     
     @IBAction func calNotFinishedTasks(_ sender: Any) {
-        self.MyTextView.text = ""
+        textBuffer = ""
         self.MyTextView.textAlignment = NSTextAlignment.left
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted

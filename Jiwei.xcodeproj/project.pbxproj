@@ -644,7 +644,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "0.4.2 Alpha";
+				MARKETING_VERSION = "0.4.4 Alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.Jiwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -677,7 +677,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "0.4.2 Alpha";
+				MARKETING_VERSION = "0.4.4 Alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.Jiwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;

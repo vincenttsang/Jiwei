@@ -20,9 +20,14 @@ class OnlineTaskViewController: UIViewController {
     
     @IBOutlet weak var MyTextView: UITextView!
     
+    private func updateMyTextView() {
+        MyTextView.text = textBuffer
+    }
+    
     @IBAction func calNotFinishedTasks(_ sender: Any) {
         textBuffer = ""
-        self.MyTextView.textAlignment = NSTextAlignment.left
+        updateMyTextView()
+        MyTextView.textAlignment = NSTextAlignment.left
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
         var num: UInt32 = 0
@@ -48,7 +53,7 @@ class OnlineTaskViewController: UIViewController {
                 let alertController = UIAlertController(title: "统计完成", message: "总共有\(num)个任务未处理" , preferredStyle: UIAlertController.Style.alert)
                 alertController.addAction(UIAlertAction(title: "好的", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alertController, animated: true, completion: nil)
-                self.MyTextView.text = self.textBuffer
+                self.updateMyTextView()
             }
             JiweiAPI.getTaskListByParam(pageNum: 1, limit: INT32_MAX, status: "未处理", method: "线上", completion: complete)
         })

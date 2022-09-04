@@ -21,6 +21,7 @@
 		BFA1461427D1E357005F4C20 /* BorrowThingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1461327D1E357005F4C20 /* BorrowThingViewController.swift */; };
 		BFA1461627D1F645005F4C20 /* DismissKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA1461527D1F645005F4C20 /* DismissKeyboard.swift */; };
 		BFA3C3A627A78A4E0038594D /* RequestStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3C3A527A78A4E0038594D /* RequestStructures.swift */; };
+		BFDAB37528B8AB150075D539 /* PopUpTaskDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDAB37428B8AB150075D539 /* PopUpTaskDetail.swift */; };
 		BFE4CAC827950476001D7D06 /* PersonalCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */; };
 		BFE4CAD0279544DA001D7D06 /* ResponseStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */; };
 		BFE8E8BE2794255A00AE4781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE8E8BD2794255A00AE4781 /* AppDelegate.swift */; };
@@ -76,6 +77,7 @@
 		BFA1461327D1E357005F4C20 /* BorrowThingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorrowThingViewController.swift; path = /Users/vincent/Documents/Xcode/Jiwei/Jiwei/BorrowThingViewController.swift; sourceTree = "<absolute>"; };
 		BFA1461527D1F645005F4C20 /* DismissKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboard.swift; sourceTree = "<group>"; };
 		BFA3C3A527A78A4E0038594D /* RequestStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStructures.swift; sourceTree = "<group>"; };
+		BFDAB37428B8AB150075D539 /* PopUpTaskDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTaskDetail.swift; sourceTree = "<group>"; };
 		BFE4CAC727950476001D7D06 /* PersonalCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCenterViewController.swift; sourceTree = "<group>"; };
 		BFE4CACF279544DA001D7D06 /* ResponseStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStructures.swift; sourceTree = "<group>"; };
 		BFE8E8BA2794255A00AE4781 /* Jiwei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jiwei.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +200,7 @@
 				BFE8E8CE2794255B00AE4781 /* Info.plist */,
 				BFE8E8C32794255A00AE4781 /* Main.storyboard */,
 				BFE8E8CB2794255B00AE4781 /* LaunchScreen.storyboard */,
+				BFDAB37428B8AB150075D539 /* PopUpTaskDetail.swift */,
 			);
 			path = Jiwei;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 			files = (
 				BFE4CAC827950476001D7D06 /* PersonalCenterViewController.swift in Sources */,
 				BFA1461427D1E357005F4C20 /* BorrowThingViewController.swift in Sources */,
+				BFDAB37528B8AB150075D539 /* PopUpTaskDetail.swift in Sources */,
 				BF6449A127968AD9007297A9 /* JiweiTabBarController.swift in Sources */,
 				BF5BBC912795BDF8009C76EA /* TaskCenterViewController.swift in Sources */,
 				BFE8E8C22794255A00AE4781 /* LoginViewController.swift in Sources */,
@@ -556,8 +560,10 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
@@ -614,8 +620,10 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,6";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -627,6 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = Jiwei/Jiwei.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -644,7 +653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "0.4.5 Alpha";
+				MARKETING_VERSION = "0.5.2 Alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.Jiwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -660,6 +669,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LIBRARY = "libc++";
 				CODE_SIGN_ENTITLEMENTS = Jiwei/Jiwei.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -677,7 +687,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "0.4.5 Alpha";
+				MARKETING_VERSION = "0.5.2 Alpha";
 				PRODUCT_BUNDLE_IDENTIFIER = org.vincenttsang.Jiwei;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;

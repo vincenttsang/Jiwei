@@ -38,6 +38,8 @@ class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var myTaskTableView: UITableView!
     
+    let startDate:String = "2021-09-01"
+    
     func getMyTaskList() {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
@@ -50,10 +52,17 @@ class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDa
                     return
                 }
                 for i in (result!.data!) {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let taskInterval = (dateFormatter.date(from: i?.startDate ?? "1970-01-01")?.timeIntervalSince1970) ?? 0
+                    let startInterval = (dateFormatter.date(from: self.startDate)?.timeIntervalSince1970) ?? 0
+                    if taskInterval < startInterval {
+                        //如果该任务日期小于startDate，跳过这次循环
+                        continue
+                    }
                     if((i?.name) != nil) {
                         self.myTaskTableView.reloadData()
                         let task = "编号: " + ((i?.id)!) + "    称呼: " + ((i?.name)!) + "    状态: " + ((i?.status)!)
-                        
                         self.totalTasks += 1
                         if((i?.status)! == "已完成") {
                             self.finishedTasks += 1
@@ -78,7 +87,7 @@ class MyTaskViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBAction func countMyTasks(_ sender: Any) {
         let title = "我的任务数"
         let completionRate = Double(finishedTasks)/Double(totalTasks - ongoingTasks)
-        let msg = "您总共接下了 " + String(totalTasks) + "个任务\n" + "其中已完成 " + String(finishedTasks) + " 个任务\n" + "已取消 " + String(cancelledTasks) + " 个任务\n" + "有 " + String(ongoingTasks) + " 个任务进行中\n" + "任务完成率为" + String(format: " %.2f%%", completionRate * 100)
+        let msg = "从\(startDate)至今，您总共接下了 " + String(totalTasks) + "个任务\n" + "其中已完成 " + String(finishedTasks) + " 个任务\n" + "已取消 " + String(cancelledTasks) + " 个任务\n" + "有 " + String(ongoingTasks) + " 个任务进行中\n" + "任务完成率为" + String(format: " %.2f%%", completionRate * 100)
         let alertController = UIAlertController(title: title, message: msg , preferredStyle: UIAlertController.Style.alert)
         alertController.addAction(UIAlertAction(title: "好的", style: UIAlertAction.Style.default, handler: nil))
         self.present(alertController, animated: true, completion: nil)

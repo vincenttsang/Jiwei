@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.5.0)
+  - Alamofire (5.6.1)
   - KeychainAccess (4.2.2)
 
 DEPENDENCIES:
@@ -12,7 +12,7 @@ SPEC REPOS:
     - KeychainAccess
 
 SPEC CHECKSUMS:
-  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
 
 PODFILE CHECKSUM: 79f17b411d4408fe59b7881728ce13e21e72f1b9
